@@ -1,10 +1,15 @@
 import React from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle, theme } from "./styles/globalStyle";
 
 function App() {
   return (
-    <div>
-      <h1>Easybank landing</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <div>
+        <h1>Easybank landing</h1>
+      </div>
+    </ThemeProvider>
   );
 }
 
