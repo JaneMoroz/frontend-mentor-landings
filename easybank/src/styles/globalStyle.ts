@@ -54,6 +54,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
   }
   ul {
     text-decoration: none;
+    list-style: none;
   }
   button {
     background: none;
@@ -68,7 +69,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     border: none;
     outline: none;
   }
-  h1 {
+  h1, h2, h3 {
     margin: 0;
   }
 `;

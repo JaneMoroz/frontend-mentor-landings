@@ -2,13 +2,18 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles/globalStyle";
 
+// Components
+import { Header, Hero, Features, Articles, Footer } from "./components";
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div>
-        <h1>Easybank landing</h1>
-      </div>
+      <Header />
+      <Hero />
+      <Features />
+      <Articles />
+      <Footer />
     </ThemeProvider>
   );
 }
