@@ -1,4 +1,4 @@
-const navLinks = [
+const headerLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/" },
   { name: "Contact", href: "/" },
@@ -6,4 +6,4 @@ const navLinks = [
   { name: "Careers", href: "/" },
 ];
 
-export default navLinks;
+export default headerLinks;
