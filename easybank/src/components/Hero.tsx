@@ -19,7 +19,11 @@ const Hero = () => {
     <HeroContainer>
       <Container>
         <HeroInner>
-          <HeroText>
+          <HeroText
+            initial={{ x: "-100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+          >
             <PrimaryHeading>Next generation digital banking</PrimaryHeading>
             <Paragraph big>
               Take your financial life online. Your Easybank account will be a
@@ -28,7 +32,11 @@ const Hero = () => {
             </Paragraph>
             <Button>Request invite</Button>
           </HeroText>
-          <HeroBackground />
+          <HeroBackground
+            initial={{ x: "100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+          />
         </HeroInner>
       </Container>
     </HeroContainer>

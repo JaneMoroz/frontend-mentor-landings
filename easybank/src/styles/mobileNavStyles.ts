@@ -1,6 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
   position: fixed;
   display: flex;
   justify-content: center;
@@ -12,10 +13,10 @@ export const Overlay = styled.div`
   background: ${(props) => props.theme.overlay};
 `;
 
-export const NavLinks = styled.nav`
+export const NavLinks = styled(motion.nav)`
   position: absolute;
-  top: 8rem;
-  left: 50%;
+  /* top: 8rem;
+  left: 50%; */
   transform: translateX(-50%);
   padding: 2.4rem;
   border-radius: 5px;
