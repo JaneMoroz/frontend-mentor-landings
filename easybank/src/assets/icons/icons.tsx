@@ -1,7 +1,7 @@
 export const ApiIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
     <defs>
-      <linearGradient id="a" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
+      <linearGradient id="c" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
         <stop offset="0%" stopColor="#33D35E" />
         <stop offset="100%" stopColor="#2AB6D9" />
       </linearGradient>
@@ -20,7 +20,7 @@ export const ApiIcon = () => (
 export const BudgetIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
     <defs>
-      <linearGradient id="a" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
+      <linearGradient id="d" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
         <stop offset="0%" stopColor="#33D35E" />
         <stop offset="100%" stopColor="#2AB6D9" />
       </linearGradient>
@@ -74,7 +74,7 @@ export const InstagramIcon = () => (
 export const OnBoardingIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
     <defs>
-      <linearGradient id="a" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
+      <linearGradient id="e" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
         <stop offset="0%" stopColor="#33D35E" />
         <stop offset="100%" stopColor="#2AB6D9" />
       </linearGradient>
@@ -93,7 +93,7 @@ export const OnBoardingIcon = () => (
 export const OnlineIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72">
     <defs>
-      <linearGradient id="a" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
+      <linearGradient id="f" x1="0%" x2="99.58%" y1="0%" y2="99.58%">
         <stop offset="0%" stopColor="#33D35E" />
         <stop offset="100%" stopColor="#2AB6D9" />
       </linearGradient>

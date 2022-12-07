@@ -136,7 +136,7 @@ export const SecondaryHeading = styled.h2`
 
 export const TertiaryHeading = styled.h3`
   color: ${(props) => props.theme.darkBlue};
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 300;
   line-height: 3.2rem;
 `;
