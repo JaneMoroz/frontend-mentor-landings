@@ -72,10 +72,14 @@ export const HeroBackground = styled.div`
 
     @media only screen and (max-width: 56.25em) {
       width: 100%;
-      background-size: 100%;
+      background-size: 70%;
       background-position: center 100%;
       top: -25%;
       left: 0;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      background-size: 100%;
     }
   }
 
