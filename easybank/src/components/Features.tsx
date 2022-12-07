@@ -42,19 +42,7 @@ const features = [
 const Features = () => {
   return (
     <FeaturesContainer>
-      <Container
-        initial={{ opacity: 0, y: 72 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 0.5,
-            duration: 1,
-            ease: [0.6, 0.05, -0.01, 0.9],
-          },
-        }}
-        viewport={{ once: true }}
-      >
+      <Container>
         <SecondaryHeading>Why choose Easybank?</SecondaryHeading>
         <Paragraph smallerWidth big>
           We leverage Open Banking to turn your bank account into your financial

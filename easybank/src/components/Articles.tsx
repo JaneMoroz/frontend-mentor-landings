@@ -13,19 +13,7 @@ import articles from "../assets/data/data";
 const Articles = () => {
   return (
     <ArticlesContainer>
-      <Container
-        initial={{ opacity: 0, y: 72 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: {
-            delay: 0.5,
-            duration: 1,
-            ease: [0.6, 0.05, -0.01, 0.9],
-          },
-        }}
-        viewport={{ once: true }}
-      >
+      <Container>
         <SecondaryHeading>Latest Articles</SecondaryHeading>
         <ArticlesList>
           {articles.map((article, index) => (
