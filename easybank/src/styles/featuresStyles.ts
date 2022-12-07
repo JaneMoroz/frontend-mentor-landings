@@ -10,13 +10,20 @@ export const FeaturesContainer = styled.div`
 `;
 
 export const FeaturesList = styled.ul`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: flex-start;
   column-gap: 1.6rem;
   padding: 3.2rem 0;
 
   @media only screen and (max-width: 56.25em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 3.2rem;
   }
 `;

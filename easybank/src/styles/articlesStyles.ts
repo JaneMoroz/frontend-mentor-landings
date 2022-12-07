@@ -15,6 +15,10 @@ export const ArticlesList = styled.div`
   column-gap: 1.6rem;
 
   @media only screen and (max-width: 56.25em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: 37.5em) {
     display: flex;
     flex-direction: column;
     row-gap: 3.2rem;
