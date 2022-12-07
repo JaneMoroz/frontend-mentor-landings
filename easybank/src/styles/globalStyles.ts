@@ -94,9 +94,9 @@ export const TertiaryHeading = styled.h3`
 
 export const QuaternaryHeading = styled.h4`
   color: ${(props) => props.theme.darkBlue};
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 2.6rem;
 `;
 
 type ParagraphProps = {

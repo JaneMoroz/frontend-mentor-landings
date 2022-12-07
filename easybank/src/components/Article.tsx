@@ -23,7 +23,7 @@ interface ArticleProp {
 const Article: React.FC<ArticleProp> = ({ article }) => {
   const { id, author, title, text, image } = article;
   return (
-    <ArticleContainer>
+    <ArticleContainer href="#">
       <ArticleImage src={image} alt="" />
       <ArticleText>
         <ArticleAuthor>By {author}</ArticleAuthor>

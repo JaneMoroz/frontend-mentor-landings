@@ -3,15 +3,25 @@ import styled, { css } from "styled-components";
 export const ArticlesContainer = styled.div`
   padding: 6.4rem 0;
   background: ${(props) => props.theme.lightGray};
+
+  @media only screen and (max-width: 56.25em) {
+    text-align: center;
+  }
 `;
 
 export const ArticlesList = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1.6rem;
+
+  @media only screen and (max-width: 56.25em) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
 `;
 
-export const ArticleContainer = styled.article`
+export const ArticleContainer = styled.a`
   display: flex;
   flex-direction: column;
   row-gap: 1.8rem;
@@ -29,7 +39,8 @@ export const ArticleText = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 1.2rem;
-  padding: 2rem;
+  padding: 2rem 3.2rem 3.2rem 3.2rem;
+  text-align: start;
 `;
 
 export const ArticleAuthor = styled.span`
