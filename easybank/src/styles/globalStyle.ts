@@ -52,6 +52,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     min-height: 100vh;
     color: ${(props) => props.theme.grayishBlue};
     background: ${(props) => props.theme.white};
+    overflow-x: hidden;
   }
   ul {
     text-decoration: none;

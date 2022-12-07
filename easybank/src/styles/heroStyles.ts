@@ -1,31 +1,85 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const HeroContainer = styled.div`
   position: relative;
-  height: calc(100vh - 88px);
-  min-height: 500px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+  height: 55rem;
+  width: 100%;
   background: ${(props) => props.theme.lightGray};
+
+  @media only screen and (max-width: 56.25em) {
+    height: 80rem;
+  }
+`;
+
+export const HeroInner = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: column;
+  }
 `;
 
 export const HeroText = styled.div`
   width: 50%;
   max-width: 450px;
+
+  @media only screen and (max-width: 56.25em) {
+    text-align: center;
+    order: 2;
+    width: 80%;
+    max-width: 100%;
+    padding-bottom: 4.8rem;
+  }
 `;
 
 export const HeroBackground = styled.div`
-  position: absolute;
-  top: -260px;
-  left: 40%;
-`;
-
-export const HeroImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 55%;
+  position: relative;
+  flex: 3;
   height: 100%;
-  width: 50%;
-  object-fit: cover;
+  width: 100vw;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-image: url("/images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: 70%;
+    background-position: 0% 100%;
+
+    @media only screen and (max-width: 56.25em) {
+      width: 180vw;
+      left: -22%;
+      background-size: 100%;
+      background-position: 0 100%;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background-size: 85%;
+    background-image: url("/images/imageMockups.png");
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    left: 15%;
+
+    @media only screen and (max-width: 56.25em) {
+      width: 100%;
+      background-size: 75%;
+      background-position: center 100%;
+      top: -28%;
+      left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 56.25em) {
+    order: 1;
+  }
 `;
