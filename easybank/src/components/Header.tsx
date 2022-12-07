@@ -29,7 +29,10 @@ const Header = () => {
             ))}
           </NavLinks>
           <Button>Request Invite</Button>
-          <Hamburger onClick={() => setNavIsOpen(!navIsOpen)}>
+          <Hamburger
+            aria-label="navigation toggle"
+            onClick={() => setNavIsOpen(!navIsOpen)}
+          >
             {navIsOpen ? <CloseIcon /> : <HamburgerIcon />}
           </Hamburger>
           {navIsOpen && <MobileNav />}

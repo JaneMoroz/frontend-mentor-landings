@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const FeaturesContainer = styled.div`
+export const FeaturesContainer = styled.section`
   padding: 6.4rem 0;
   background: ${(props) => props.theme.lightGrayishBlue};
 

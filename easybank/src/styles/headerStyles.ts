@@ -21,7 +21,7 @@ export const HeaderNav = styled.header`
   }
 `;
 
-export const NavLinks = styled.div`
+export const NavLinks = styled.nav`
   a {
     margin-right: 2.4rem;
   }

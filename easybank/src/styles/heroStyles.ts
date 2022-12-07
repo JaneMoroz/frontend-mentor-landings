@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.div`
+export const HeroContainer = styled.section`
   position: relative;
   height: 55rem;
   width: 100%;

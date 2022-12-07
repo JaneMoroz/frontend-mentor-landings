@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const ArticlesContainer = styled.div`
+export const ArticlesContainer = styled.section`
   padding: 6.4rem 0;
   background: ${(props) => props.theme.lightGray};
 
