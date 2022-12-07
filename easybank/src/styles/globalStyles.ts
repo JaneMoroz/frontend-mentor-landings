@@ -71,17 +71,17 @@ export const Link = styled.a<LinkProps>`
 
 export const PrimaryHeading = styled.h1`
   color: ${(props) => props.theme.darkBlue};
-  font-size: 3.6rem;
+  font-size: 4.6rem;
   font-weight: 300;
-  line-height: 4.8rem;
+  line-height: 5rem;
   margin-bottom: 2rem;
 `;
 
 export const SecondaryHeading = styled.h2`
   color: ${(props) => props.theme.darkBlue};
-  font-size: 2.8rem;
+  font-size: 4rem;
   font-weight: 300;
-  line-height: 3.2rem;
+  line-height: 4.4rem;
   margin-bottom: 2rem;
 `;
 
@@ -132,5 +132,8 @@ export const Paragraph = styled.p<ParagraphProps>`
     props.smallerWidth === true &&
     css`
       width: 60%;
+      @media only screen and (max-width: 56.25em) {
+        width: 100%;
+      }
     `}
 `;

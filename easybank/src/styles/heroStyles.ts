@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
   background: ${(props) => props.theme.lightGray};
 
   @media only screen and (max-width: 56.25em) {
-    height: 80rem;
+    height: 70rem;
   }
 `;
 
@@ -29,9 +29,9 @@ export const HeroText = styled.div`
   @media only screen and (max-width: 56.25em) {
     text-align: center;
     order: 2;
-    width: 80%;
+    width: 100%;
     max-width: 100%;
-    padding-bottom: 4.8rem;
+    padding-bottom: 6.4rem;
   }
 `;
 
@@ -55,7 +55,7 @@ export const HeroBackground = styled.div`
       width: 180vw;
       left: -22%;
       background-size: 100%;
-      background-position: 0 100%;
+      background-position: 0% 100%;
     }
   }
 
@@ -72,9 +72,9 @@ export const HeroBackground = styled.div`
 
     @media only screen and (max-width: 56.25em) {
       width: 100%;
-      background-size: 75%;
+      background-size: 100%;
       background-position: center 100%;
-      top: -28%;
+      top: -25%;
       left: 0;
     }
   }
