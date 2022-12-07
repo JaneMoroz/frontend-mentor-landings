@@ -10,6 +10,7 @@ type ThemeType = {
   lightGrayishBlue: string;
   lightGray: string;
   white: string;
+  overlay: string;
 };
 
 // Theme
@@ -21,6 +22,7 @@ export const theme = {
   lightGrayishBlue: "hsl(220, 16%, 96%)",
   lightGray: "hsl(0, 0%, 98%)",
   white: "hsl(0, 0%, 100%)",
+  overlay: "rgba(45, 49, 77, 0.4)",
 };
 
 // Global style
@@ -44,7 +46,6 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-family: 'Public Sans', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
-    /* line-height: 1.6; */
   }
   main {
     position: relative;

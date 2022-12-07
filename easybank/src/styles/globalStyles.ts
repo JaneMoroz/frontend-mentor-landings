@@ -39,7 +39,7 @@ export const Button = styled.button`
     ${(props) => props.theme.brightCyan}
   );
   text-transform: capitalize;
-  padding: 1.2rem 2.4rem;
+  padding: 1.4rem 3.2rem;
   border-radius: 2.8rem;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.125);
   cursor: pointer;
@@ -48,6 +48,7 @@ export const Button = styled.button`
 
 type LinkProps = {
   white?: boolean;
+  mobile?: boolean;
 };
 
 export const Link = styled.a<LinkProps>`
@@ -58,6 +59,12 @@ export const Link = styled.a<LinkProps>`
     props.white === true &&
     css`
       color: ${(props) => props.theme.lightGray} !important;
+    `}
+  ${(props) =>
+    props.mobile === true &&
+    css`
+      font-size: 2rem;
+      color: ${(props) => props.theme.darkBlue} !important;
     `}
 `;
 

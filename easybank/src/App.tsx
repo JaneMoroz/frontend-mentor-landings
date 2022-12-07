@@ -9,11 +9,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header />
-      <Hero />
-      <Features />
-      <Articles />
-      <Footer />
+      <main>
+        <Header />
+        <Hero />
+        <Features />
+        <Articles />
+        <Footer />
+      </main>
     </ThemeProvider>
   );
 }
