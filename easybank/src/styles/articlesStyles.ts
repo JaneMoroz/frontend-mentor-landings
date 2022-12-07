@@ -31,6 +31,10 @@ export const ArticleContainer = styled.a`
   row-gap: 1.8rem;
   background: ${(props) => props.theme.white};
   border-radius: 1rem;
+
+  &:hover h4 {
+    color: ${(props) => props.theme.limeGreen};
+  }
 `;
 
 export const ArticleImage = styled.img`

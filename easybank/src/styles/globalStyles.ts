@@ -46,6 +46,10 @@ export const Button = styled.button`
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.125);
   cursor: pointer;
   transition: all 0.3s;
+
+  &:hover {
+    filter: brightness(110%);
+  }
 `;
 
 type LinkProps = {
@@ -54,19 +58,63 @@ type LinkProps = {
 };
 
 export const Link = styled.a<LinkProps>`
+  position: relative;
   color: ${(props) => props.theme.grayishBlue};
   font-size: 1.4rem;
   text-transform: capitalize;
+  transition: all 0.3s;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 0;
+    left: 0;
+    top: 40px;
+    background: linear-gradient(
+      to right,
+      ${(props) => props.theme.limeGreen},
+      ${(props) => props.theme.brightCyan}
+    );
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.darkBlue};
+    &::before {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+
   ${(props) =>
     props.white === true &&
     css`
       color: ${(props) => props.theme.lightGray} !important;
+
+      &:hover {
+        color: ${(props) => props.theme.limeGreen} !important;
+        svg {
+          path {
+            fill: ${(props) => props.theme.limeGreen};
+          }
+        }
+      }
+      &:before {
+        display: none;
+      }
     `}
   ${(props) =>
     props.mobile === true &&
     css`
       font-size: 2rem;
       color: ${(props) => props.theme.darkBlue} !important;
+
+      &:before {
+        display: none;
+      }
     `}
 `;
 
@@ -98,6 +146,7 @@ export const QuaternaryHeading = styled.h4`
   font-size: 2rem;
   font-weight: 400;
   line-height: 2.6rem;
+  transition: all 0.3s;
 `;
 
 type ParagraphProps = {

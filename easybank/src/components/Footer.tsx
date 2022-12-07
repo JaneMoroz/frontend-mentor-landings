@@ -26,7 +26,7 @@ const Footer = () => {
             <FooterLogo />
             <SocialLinks>
               {socialLinks.map((link, index) => (
-                <Link aria-label={link.name} key={index} href={link.href}>
+                <Link white aria-label={link.name} key={index} href={link.href}>
                   {link.icon}
                 </Link>
               ))}
