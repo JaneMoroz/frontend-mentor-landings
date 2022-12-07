@@ -38,9 +38,18 @@ export const ArticleContainer = styled.a`
 `;
 
 export const ArticleImage = styled.img`
-  height: 100%;
+  height: 18rem;
   width: 100%;
+  object-fit: cover;
   border-radius: 1rem 1rem 0 0;
+
+  @media only screen and (max-width: 56.25em) {
+    height: 25rem;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    height: 100%;
+  }
 `;
 
 export const ArticleText = styled.div`

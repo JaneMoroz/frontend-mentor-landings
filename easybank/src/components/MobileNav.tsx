@@ -11,17 +11,13 @@ import { Overlay, NavLinks } from "../styles/mobileNavStyles";
 const MobileNav = () => {
   return ReactDOM.createPortal(
     <Overlay
-      key="mobileNav"
       initial={{ opacity: "0" }}
-      exit={{ opacity: "0", transition: { delay: 0.4 } }}
       animate={{ opacity: "100%" }}
       transition={{ duration: 0.4, ease: [0.6, 0.05, -0.01, 0.9] }}
     >
       <NavLinks
-        key="mobileLinks"
         initial={{ y: "-200%" }}
-        exit={{ y: "-200%" }}
-        animate={{ y: "-70%" }}
+        animate={{ y: "70px" }}
         transition={{
           delay: 0.4,
           duration: 0.4,

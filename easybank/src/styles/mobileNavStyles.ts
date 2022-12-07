@@ -15,8 +15,7 @@ export const Overlay = styled(motion.div)`
 
 export const NavLinks = styled(motion.nav)`
   position: absolute;
-  /* top: 8rem;
-  left: 50%; */
+  top: 0;
   transform: translateX(-50%);
   padding: 2.4rem;
   border-radius: 5px;

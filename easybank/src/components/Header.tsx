@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MobileNav from "./MobileNav";
 
 // Logo
@@ -16,6 +16,15 @@ import { HamburgerIcon, CloseIcon } from "../assets/icons/icons";
 
 const Header = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (navIsOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [navIsOpen]);
+
   return (
     <HeaderNav>
       <Container>
