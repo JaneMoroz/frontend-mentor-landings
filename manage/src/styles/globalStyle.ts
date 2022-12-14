@@ -10,6 +10,7 @@ type ThemeType = {
   veryPaleRed: string;
   veryLightGray: string;
   white: string;
+  overlay: string;
 };
 
 // Theme
@@ -21,6 +22,7 @@ export const theme = {
   veryPaleRed: "hsl(13, 100%, 96%)",
   veryLightGray: "hsl(0, 0%, 98%)",
   white: "hsl(0, 0%, 100%)",
+  overlay: "rgba(34, 29, 37, 0.2)",
 };
 
 // Global style
