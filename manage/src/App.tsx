@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles/globalStyle";
 
 // Components
-import { Header, Hero } from "./components";
+import { Features, Header, Hero } from "./components";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <main>
         <Header />
         <Hero />
+        <Features />
       </main>
     </ThemeProvider>
   );

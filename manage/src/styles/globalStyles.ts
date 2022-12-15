@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 type FlexProps = {
   spaceBetween?: boolean;
+  alignStart?: boolean;
   column?: boolean;
 };
 
@@ -23,6 +24,15 @@ export const Flex = styled.div<FlexProps>`
     props.spaceBetween === true &&
     css`
       justify-content: space-between;
+    `}
+  ${(props) =>
+    props.alignStart === true &&
+    css`
+      align-items: flex-start;
+
+      @media only screen and (max-width: 56.25em) {
+        align-items: center;
+      }
     `}
   ${(props) =>
     props.column === true &&
@@ -95,15 +105,37 @@ export const Link = styled.a<LinkProps>`
 export const PrimaryHeading = styled.h1`
   font-size: 4.4rem;
   line-height: 5.2rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.8rem;
 `;
 
-export const SecondaryHeading = styled.h2``;
+export const SecondaryHeading = styled.h2`
+  font-size: 3.6rem;
+  line-height: 4rem;
+  margin-bottom: 2.8rem;
+`;
 
-export const TertiaryHeading = styled.h3``;
-
-export const Paragraph = styled.p`
-  color: ${(props) => props.theme.darkGrayishBlue};
+export const TertiaryHeading = styled.h3`
+  font-size: 2rem;
   line-height: 2.4rem;
+`;
+
+type ParagraphProps = {
+  fullWidth?: boolean;
+};
+
+export const Paragraph = styled.p<ParagraphProps>`
+  color: ${(props) => props.theme.darkGrayishBlue};
+  line-height: 2.8rem;
   margin-bottom: 3.2rem;
+  width: 80%;
+
+  ${(props) =>
+    props.fullWidth === true &&
+    css`
+      width: 100%;
+    `}
+
+  @media only screen and (max-width: 56.25em) {
+    margin: 0 auto 3.2rem auto;
+  }
 `;
