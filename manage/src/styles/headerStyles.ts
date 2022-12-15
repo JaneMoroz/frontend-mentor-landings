@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const HeaderNav = styled.header`
   position: relative;
   padding: 4rem 0;
-  background: ${(props) => props.theme.white};
   z-index: 999;
 
   button:last-child {

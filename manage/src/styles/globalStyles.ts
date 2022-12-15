@@ -92,10 +92,18 @@ export const Link = styled.a<LinkProps>`
     `}
 `;
 
-export const PrimaryHeading = styled.h1``;
+export const PrimaryHeading = styled.h1`
+  font-size: 4.4rem;
+  line-height: 5.2rem;
+  margin-bottom: 3.2rem;
+`;
 
 export const SecondaryHeading = styled.h2``;
 
 export const TertiaryHeading = styled.h3``;
 
-export const Paragraph = styled.p``;
+export const Paragraph = styled.p`
+  color: ${(props) => props.theme.darkGrayishBlue};
+  line-height: 2.4rem;
+  margin-bottom: 3.2rem;
+`;
