@@ -42,16 +42,18 @@ export const Flex = styled.div<FlexProps>`
 `;
 
 export const Button = styled.button`
-  font-size: 1.4rem;
-  padding: 1.2rem 2.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 1.2rem 3.2rem;
   background: ${(props) => props.theme.brightRed};
   color: ${(props) => props.theme.white};
-  border-radius: 3.2rem;
+  border-radius: 2.2rem;
   box-shadow: 4px 6px 6px rgba(242, 95, 58, 0.2);
   transition: all 0.3s;
 
   &:hover {
-    background: ${(props) => props.theme.veryPaleRed};
+    filter: brightness(1.4);
   }
 `;
 
@@ -63,7 +65,8 @@ type LinkProps = {
 export const Link = styled.a<LinkProps>`
   position: relative;
   color: ${(props) => props.theme.darkBlue};
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
   text-transform: capitalize;
   transition: all 0.3s;
 
@@ -103,20 +106,23 @@ export const Link = styled.a<LinkProps>`
 `;
 
 export const PrimaryHeading = styled.h1`
-  font-size: 4.4rem;
-  line-height: 5.2rem;
-  margin-bottom: 2.8rem;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  margin-bottom: 2.4rem;
 `;
 
 export const SecondaryHeading = styled.h2`
-  font-size: 3.6rem;
-  line-height: 4rem;
-  margin-bottom: 2.8rem;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
 `;
 
 export const TertiaryHeading = styled.h3`
-  font-size: 2rem;
-  line-height: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
 `;
 
 type ParagraphProps = {

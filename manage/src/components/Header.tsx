@@ -39,7 +39,7 @@ const Header = () => {
               </Link>
             ))}
           </NavLinks>
-          <Button>Request Invite</Button>
+          <Button>Get started</Button>
           <Hamburger
             aria-label="navigation toggle"
             onClick={() => setNavIsOpen(!navIsOpen)}

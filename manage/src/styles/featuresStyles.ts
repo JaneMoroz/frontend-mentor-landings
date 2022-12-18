@@ -56,7 +56,8 @@ export const FeatureListItem = styled.li`
 `;
 
 export const FeatureNumber = styled.span`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
   padding: 1.2rem 2.4rem;
   background: ${(props) => props.theme.brightRed};
   color: ${(props) => props.theme.white};

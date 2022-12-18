@@ -5,22 +5,27 @@ export const HeroContainer = styled.section`
   height: 55rem;
   width: 100%;
   background: ${(props) => props.theme.lightGray};
+  margin: 5.6rem 0;
+
+  @media only screen and (max-width: 56.25em) {
+    margin: 0;
+  }
 
   &:before {
     content: "";
     position: absolute;
-    top: -120px;
+    top: -180px;
     height: 110%;
     width: 100vw;
     background-image: url("/images/bg-tablet-pattern.svg");
     background-repeat: no-repeat;
-    background-size: 60%;
-    background-position: 120% 100%;
+    background-size: 80%;
+    background-position: 200% 100%;
 
     @media only screen and (max-width: 56.25em) {
-      top: -50%;
-      left: 20%;
       background-size: 100%;
+      left: 15%;
+      background-position: 0% -15%;
     }
   }
 
@@ -34,6 +39,7 @@ export const HeroInner = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 3.2rem;
 
   @media only screen and (max-width: 56.25em) {
     flex-direction: column;
@@ -42,8 +48,6 @@ export const HeroInner = styled.div`
 `;
 
 export const HeroText = styled.div`
-  width: 50%;
-  max-width: 450px;
   z-index: 1;
 
   @media only screen and (max-width: 56.25em) {
@@ -57,7 +61,6 @@ export const HeroText = styled.div`
 
 export const HeroImage = styled.img`
   position: relative;
-  flex: 3;
   height: 100%;
   width: 100%;
   object-fit: cover;
