@@ -20,6 +20,11 @@ export const Flex = styled.div<FlexProps>`
   align-items: center;
   column-gap: 1.6rem;
   row-gap: 1.6rem;
+
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  }
+
   ${(props) =>
     props.spaceBetween === true &&
     css`
@@ -41,7 +46,11 @@ export const Flex = styled.div<FlexProps>`
     `}
 `;
 
-export const Button = styled.button`
+type ButtonProps = {
+  cta?: boolean;
+};
+
+export const Button = styled.button<ButtonProps>`
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: capitalize;
@@ -55,6 +64,14 @@ export const Button = styled.button`
   &:hover {
     filter: brightness(1.4);
   }
+
+  ${(props) =>
+    props.cta === true &&
+    css`
+      background: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.brightRed};
+      z-index: 9;
+    `}
 `;
 
 type RoundButtonProps = {
@@ -132,11 +149,30 @@ export const PrimaryHeading = styled.h1`
   margin-bottom: 2.4rem;
 `;
 
-export const SecondaryHeading = styled.h2`
+type SecondaryHeadingProps = {
+  cta?: boolean;
+};
+
+export const SecondaryHeading = styled.h2<SecondaryHeadingProps>`
   font-size: 4rem;
   line-height: 4.4rem;
   font-weight: 700;
   margin-bottom: 2.4rem;
+
+  ${(props) =>
+    props.cta === true &&
+    css`
+      color: ${(props) => props.theme.white};
+      margin-bottom: 0;
+      width: 50%;
+      z-index: 9;
+
+      @media only screen and (max-width: 37.5em) {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1.4rem;
+      }
+    `}
 `;
 
 export const TertiaryHeading = styled.h3`
