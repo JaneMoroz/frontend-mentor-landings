@@ -11,6 +11,7 @@ type ThemeType = {
   veryLightGray: string;
   white: string;
   overlay: string;
+  error: string;
 };
 
 // Theme
@@ -23,6 +24,7 @@ export const theme = {
   veryLightGray: "hsl(0, 0%, 98%)",
   white: "hsl(0, 0%, 100%)",
   overlay: "rgba(34, 29, 37, 0.2)",
+  error: "#F33C3C",
 };
 
 // Global style

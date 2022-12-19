@@ -120,13 +120,13 @@ export const Link = styled.a<LinkProps>`
   ${(props) =>
     props.white === true &&
     css`
-      color: ${(props) => props.theme.lightGray} !important;
+      color: ${(props) => props.theme.white} !important;
 
       &:hover {
-        color: ${(props) => props.theme.limeGreen} !important;
+        color: ${(props) => props.theme.brightRed} !important;
         svg {
           path {
-            fill: ${(props) => props.theme.limeGreen};
+            fill: ${(props) => props.theme.brightRed};
           }
         }
       }

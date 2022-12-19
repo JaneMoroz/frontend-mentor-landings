@@ -3,7 +3,14 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles/globalStyle";
 
 // Components
-import { CTA, Features, Header, Hero, Testimonials } from "./components";
+import {
+  CTA,
+  Features,
+  Footer,
+  Header,
+  Hero,
+  Testimonials,
+} from "./components";
 
 function App() {
   return (
@@ -15,6 +22,7 @@ function App() {
         <Features />
         <Testimonials />
         <CTA />
+        <Footer />
       </main>
     </ThemeProvider>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MobileNav from "./MobileNav";
 
 // Logo
-import Logo from "../assets/logo";
+import { NavLogo } from "../assets/logo";
 
 // Header links
 import headerLinks from "../assets/links/headerLinks";
@@ -30,7 +30,7 @@ const Header = () => {
       <Container>
         <Flex spaceBetween>
           <Flex>
-            <Logo />
+            <NavLogo />
           </Flex>
           <NavLinks>
             {headerLinks.map((link, index) => (
