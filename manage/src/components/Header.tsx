@@ -29,9 +29,9 @@ const Header = () => {
     <HeaderNav>
       <Container>
         <Flex spaceBetween>
-          <a href="#">
+          <Flex>
             <Logo />
-          </a>
+          </Flex>
           <NavLinks>
             {headerLinks.map((link, index) => (
               <Link key={index} href={link.href}>

@@ -7,7 +7,8 @@ export const TestimonialsContainer = styled.section`
 
 export const TestimonialsList = styled.div`
   width: 100%;
-  padding: 4.8rem 0;
+  margin: 3.2rem 0;
+  padding: 4.8rem 0 2rem 0;
   display: grid;
   grid-column-gap: 2.4rem;
   grid-auto-flow: column;
@@ -15,6 +16,13 @@ export const TestimonialsList = styled.div`
   overflow-x: scroll;
   -ms-scroll-snap-type: x mandatory;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 `;
 
 export const TestimonialListItem = styled.article`
@@ -25,11 +33,25 @@ export const TestimonialListItem = styled.article`
   padding: 6.4rem 0 0 0;
   background: ${(props) => props.theme.veryLightGray};
 
+  @media only screen and (max-width: 37.5em) {
+    width: 100vw;
+  }
+
   img {
     position: absolute;
     width: 9rem;
     height: 9rem;
     top: 0;
     transform: translate(0, -50%);
+  }
+`;
+
+export const TestimonialsButtons = styled.div`
+  display: none;
+  column-gap: 1rem;
+  margin-bottom: 3.2rem;
+
+  @media only screen and (max-width: 37.5em) {
+    display: flex;
   }
 `;

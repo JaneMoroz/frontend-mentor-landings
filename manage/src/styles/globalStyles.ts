@@ -57,6 +57,26 @@ export const Button = styled.button`
   }
 `;
 
+type RoundButtonProps = {
+  active?: boolean;
+};
+
+export const RoundButton = styled.span<RoundButtonProps>`
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: ${(props) => props.theme.white};
+  border: 1px solid ${(props) => props.theme.brightRed};
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  ${(props) =>
+    props.active === true &&
+    css`
+      background: ${(props) => props.theme.brightRed};
+    `}
+`;
+
 type LinkProps = {
   white?: boolean;
   mobile?: boolean;
