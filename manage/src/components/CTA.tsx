@@ -13,7 +13,7 @@ const CTA = () => {
   return (
     <CTAContainer>
       <Container>
-        <Flex spaceBetween>
+        <Flex cta>
           <SecondaryHeading cta>
             Simplify how your team works today.
           </SecondaryHeading>

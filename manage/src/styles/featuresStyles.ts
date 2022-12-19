@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const FeaturesContainer = styled.section`
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 6.4rem;
@@ -10,6 +11,22 @@ export const FeaturesContainer = styled.section`
   @media only screen and (max-width: 56.25em) {
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: -40%;
+    height: 110%;
+    width: 100vw;
+    background-image: url("/images/bg-tablet-pattern.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+    @media only screen and (max-width: 56.25em) {
+      display: none;
+    }
   }
 `;
 

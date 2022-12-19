@@ -12,6 +12,7 @@ type FlexProps = {
   spaceBetween?: boolean;
   alignStart?: boolean;
   column?: boolean;
+  cta?: boolean;
 };
 
 export const Flex = styled.div<FlexProps>`
@@ -21,9 +22,14 @@ export const Flex = styled.div<FlexProps>`
   column-gap: 1.6rem;
   row-gap: 1.6rem;
 
-  @media only screen and (max-width: 37.5em) {
-    flex-direction: column;
-  }
+  ${(props) =>
+    props.cta === true &&
+    css`
+      justify-content: space-between;
+      @media only screen and (max-width: 37.5em) {
+        flex-direction: column;
+      }
+    `}
 
   ${(props) =>
     props.spaceBetween === true &&
