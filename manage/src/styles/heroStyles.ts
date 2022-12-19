@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const HeroContainer = styled.section`
   position: relative;
@@ -47,7 +48,7 @@ export const HeroInner = styled.div`
   }
 `;
 
-export const HeroText = styled.div`
+export const HeroText = styled(motion.div)`
   z-index: 1;
 
   @media only screen and (max-width: 56.25em) {
@@ -59,7 +60,7 @@ export const HeroText = styled.div`
   }
 `;
 
-export const HeroImage = styled.img`
+export const HeroImage = styled(motion.img)`
   position: relative;
   height: 100%;
   width: 100%;

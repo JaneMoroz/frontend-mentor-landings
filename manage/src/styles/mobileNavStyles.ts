@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-export const Overlay = styled.div`
+export const Overlay = styled(motion.div)`
   position: fixed;
   display: flex;
   justify-content: center;
@@ -12,16 +13,16 @@ export const Overlay = styled.div`
   background: ${(props) => props.theme.overlay};
 `;
 
-export const NavLinks = styled.nav`
+export const NavLinks = styled(motion.nav)`
   position: absolute;
   top: 13rem;
   left: 1;
-  padding: 2.4rem;
+  padding: 4rem 2.4rem;
   border-radius: 5px;
   background: ${(props) => props.theme.white};
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 2rem;
+  row-gap: 3.2rem;
 `;

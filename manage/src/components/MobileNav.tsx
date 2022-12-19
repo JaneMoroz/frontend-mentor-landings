@@ -10,8 +10,19 @@ import { Overlay, NavLinks } from "../styles/mobileNavStyles";
 
 const MobileNav = () => {
   return ReactDOM.createPortal(
-    <Overlay>
-      <NavLinks>
+    <Overlay
+      initial={{ opacity: "0" }}
+      animate={{ opacity: "100%" }}
+      transition={{ duration: 0.2 }}
+    >
+      <NavLinks
+        initial={{ y: "-200%" }}
+        animate={{ y: "0" }}
+        transition={{
+          delay: 0.2,
+          duration: 0.4,
+        }}
+      >
         {headerLinks.map((link, index) => (
           <Link mobile key={index} href={link.href}>
             {link.name}

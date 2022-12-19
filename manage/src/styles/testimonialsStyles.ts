@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const TestimonialsContainer = styled.section`
   margin-bottom: 6.4rem;
   width: 100vw;
 `;
 
-export const TestimonialsList = styled.div`
+export const TestimonialsList = styled(motion.div)`
   width: 100%;
   margin: 3.2rem 0;
   padding: 4.8rem 0 2rem 0;

@@ -31,7 +31,18 @@ const features = [
 
 const Features = () => {
   return (
-    <Container>
+    <Container
+      initial={{ opacity: 0, y: 72 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: 0.5,
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
+    >
       <FeaturesContainer>
         <Flex column alignStart>
           <SecondaryHeading>What’s different about Manage?</SecondaryHeading>
