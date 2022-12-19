@@ -19,7 +19,11 @@ const Hero = () => {
     <HeroContainer>
       <Container>
         <HeroInner>
-          <HeroText>
+          <HeroText
+            initial={{ x: "-100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.8 }}
+          >
             <PrimaryHeading>
               Bring everyone together to build better products.
             </PrimaryHeading>
@@ -29,7 +33,13 @@ const Hero = () => {
             </Paragraph>
             <Button>Get Started</Button>
           </HeroText>
-          <HeroImage src="/images/illustration-intro.svg" alt="" />
+          <HeroImage
+            initial={{ x: "100%" }}
+            animate={{ x: "0" }}
+            transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+            src="/images/illustration-intro.svg"
+            alt=""
+          />
         </HeroInner>
       </Container>
     </HeroContainer>
