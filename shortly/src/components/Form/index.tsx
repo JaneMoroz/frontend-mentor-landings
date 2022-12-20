@@ -13,22 +13,40 @@ type LinkListItemType = {
 const Form = () => {
   const [linksList, setLinksList] = useState([] as LinkListItemType[]);
   const [originalLink, setOriginalLink] = useState("");
+  const [error, setError] = useState("");
+
+  // Check if url is valid
+  const isValidUrl = (url: string) => {
+    return /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi.test(
+      url
+    );
+  };
 
   // Submit
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    fetch(`https://api.shrtco.de/v2/shorten?url==${originalLink}`)
-      .then((response) => response.json())
-      .then((data) => {
-        const newLink = {
-          original: originalLink,
-          new: data.result.full_short_link,
-          copied: false,
-        };
-        setLinksList([newLink, ...linksList]);
-        setOriginalLink("");
-      });
+    const target = e.target as typeof e.target & {
+      url: { value: string };
+    };
+
+    if (!isValidUrl(target.url.value)) {
+      setError("Please add a link");
+      setOriginalLink("");
+    } else {
+      fetch(`https://api.shrtco.de/v2/shorten?url==${originalLink}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const newLink = {
+            original: originalLink,
+            new: data.result.full_short_link,
+            copied: false,
+          };
+          setLinksList([newLink, ...linksList]);
+          setError("");
+          setOriginalLink("");
+        });
+    }
   };
 
   // Copy
@@ -84,6 +102,7 @@ const Form = () => {
               onChange={(e) => setOriginalLink(e.currentTarget.value)}
               required
             />
+            {error !== "" && <span className="form__error">{error}</span>}
           </div>
           <button className="btn btn--primary btn--big btn--form" type="submit">
             Shorten It!
