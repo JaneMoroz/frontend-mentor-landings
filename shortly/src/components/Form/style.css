@@ -107,7 +107,7 @@
   .form {
     flex-direction: column;
     align-items: stretch;
-    row-gap: 1.6rem;
+    row-gap: 3.2rem;
     padding: 2.4rem;
   }
 
