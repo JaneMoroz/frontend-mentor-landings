@@ -64,7 +64,50 @@ textarea {
 h1,
 h2,
 h3 {
+  color: var(--veryDarkViolet);
+  font-weight: 700;
   margin: 0;
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  margin-bottom: 1.8rem;
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+}
+
+.text--white {
+  color: var(--white);
+}
+
+.paragraph {
+  font-weight: 500;
+}
+
+.paragraph--big {
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  margin-bottom: 3.2rem;
+  width: 95%;
+}
+
+.paragraph--medium {
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.paragraph--small {
+  font-size: 1.5rem;
+  line-height: 2.6rem;
 }
 
 .container {
@@ -84,6 +127,7 @@ h3 {
 .btn--primary {
   background: var(--cyan);
   color: var(--white);
+  text-transform: capitalize;
   border-radius: 2.8rem;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
   padding: 1rem 2.4rem;
@@ -114,8 +158,13 @@ h3 {
   color: var(--veryDarkViolet);
 }
 
-.link--big,
-.btn--big {
+.link--medium,
+.btn--medium {
   color: var(--white);
   font-size: 1.8rem;
+}
+
+.btn--big {
+  font-size: 2rem;
+  padding: 1.4rem 4rem;
 }

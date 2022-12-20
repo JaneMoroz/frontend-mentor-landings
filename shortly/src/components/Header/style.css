@@ -28,9 +28,17 @@
   column-gap: 3.2rem;
 }
 
+.header__mobile-btn {
+  display: none;
+}
+
 @media only screen and (max-width: 56.25em) {
   .header__nav,
   .header__btns {
     display: none;
+  }
+
+  .header__mobile-btn {
+    display: inline-block;
   }
 }

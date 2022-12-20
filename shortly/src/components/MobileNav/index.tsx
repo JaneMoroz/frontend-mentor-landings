@@ -13,17 +13,17 @@ const MobileNav = () => {
         <nav className="mobile__nav">
           {headerLinks.map((link, index) => {
             return (
-              <a className="link link--big" key={index} href={link!.href}>
+              <a className="link link--medium" key={index} href={link!.href}>
                 {link!.name}
               </a>
             );
           })}
         </nav>
         <div className="mobile__btns">
-          <button className="btn btn--text btn--big" type="button">
+          <button className="btn btn--text btn--medium" type="button">
             Login
           </button>
-          <button className="btn btn--primary btn--big" type="button">
+          <button className="btn btn--primary btn--medium" type="button">
             Sign up
           </button>
         </div>

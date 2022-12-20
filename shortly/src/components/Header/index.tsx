@@ -53,7 +53,7 @@ const Header = () => {
           </div>
           <button
             aria-label="navigation toggle"
-            className="btn btn--hamburger"
+            className="header__mobile-btn btn btn--hamburger"
             type="button"
             onClick={() => setNavIsOpen(!navIsOpen)}
           >
