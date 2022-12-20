@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // Styles
 import "./style.css";
@@ -9,7 +10,16 @@ import headerLinks from "../../assets/links/headerLinks";
 const MobileNav = () => {
   return (
     <div className="mobile">
-      <div className="mobile__inner">
+      <motion.div
+        initial={{ y: "-200%" }}
+        animate={{ y: "0" }}
+        transition={{
+          delay: 0.4,
+          duration: 0.4,
+          ease: [0.6, 0.05, -0.01, 0.9],
+        }}
+        className="mobile__inner"
+      >
         <nav className="mobile__nav">
           {headerLinks.map((link, index) => {
             return (
@@ -27,7 +37,7 @@ const MobileNav = () => {
             Sign up
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

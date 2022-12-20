@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 // Styles
 import "./style.css";
@@ -32,7 +33,19 @@ const features = [
 const Features = () => {
   return (
     <section className="features">
-      <div className="container">
+      <motion.div
+        initial={{ opacity: 0, y: 72 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: 0.5,
+            duration: 1,
+          },
+        }}
+        viewport={{ once: true }}
+        className="container"
+      >
         <div className="title">
           <h2>Advanced Statistics</h2>
           <p className="paragraph paragraph--medium">
@@ -49,7 +62,7 @@ const Features = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 };

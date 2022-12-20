@@ -49,7 +49,7 @@
     top: -15%;
     height: 40rem;
     width: 60rem;
-    left: 15%;
+    /* left: 15%; */
   }
 }
 
@@ -65,6 +65,6 @@
   .hero__image::after {
     height: 40rem;
     width: 60rem;
-    left: 5%;
+    left: 40%;
   }
 }

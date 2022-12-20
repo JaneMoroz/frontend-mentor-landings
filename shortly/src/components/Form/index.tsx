@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 // Styles
 import "./style.css";
@@ -42,7 +43,7 @@ const Form = () => {
             new: data.result.full_short_link,
             copied: false,
           };
-          setLinksList([newLink, ...linksList]);
+          setLinksList([...linksList, newLink]);
           setError("");
           setOriginalLink("");
         });
@@ -90,7 +91,20 @@ const Form = () => {
   return (
     <section className="form-section">
       <div className="container">
-        <form className="form" onSubmit={handleSubmit}>
+        <motion.form
+          initial={{ opacity: 0, y: 72 }}
+          whileInView={{
+            opacity: 1,
+            y: -80,
+            transition: {
+              delay: 0.5,
+              duration: 0.8,
+            },
+          }}
+          viewport={{ once: true }}
+          className="form"
+          onSubmit={handleSubmit}
+        >
           <div className="form__input-group">
             <label htmlFor="url">Url</label>
             <input
@@ -107,10 +121,19 @@ const Form = () => {
           <button className="btn btn--primary btn--big btn--form" type="submit">
             Shorten It!
           </button>
-        </form>
+        </motion.form>
         <ul className="short-links">
           {linksList.map((link, index) => (
-            <li key={index} className="short-links__item">
+            <motion.li
+              initial={{ y: 400 }}
+              animate={{ y: "0" }}
+              transition={{
+                delay: 1.5,
+                duration: 0.8,
+              }}
+              key={index}
+              className="short-links__item"
+            >
               <span className="original-link">{link.original}</span>
               <div className="short-links__result">
                 <span className="short-link">{link.new}</span>
@@ -125,7 +148,7 @@ const Form = () => {
                   {link.copied ? "Copied!" : "Copy"}
                 </button>
               </div>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>

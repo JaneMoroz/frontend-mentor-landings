@@ -4,7 +4,7 @@
 
 .form {
   position: relative;
-  transform: translateY(-8rem);
+  /* transform: translateY(-8rem); */
   background: var(--darkViolet);
   border-radius: 1rem;
   padding: 5.6rem 6.4rem;
@@ -103,7 +103,7 @@
   color: var(--cyan);
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
   .form {
     flex-direction: column;
     align-items: stretch;
