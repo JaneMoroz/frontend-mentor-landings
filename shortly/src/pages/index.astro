@@ -2,7 +2,7 @@
 import "../styles/global.css"
 
 // Components
-import { Header, Hero } from "../components";
+import { Header, Hero, Form } from "../components";
 ---
 
 <html lang="en">
@@ -18,8 +18,9 @@ import { Header, Hero } from "../components";
 	</head>
 	<body>
 		<main>
-			<Header client:load/>
+			<Header client:load />
 			<Hero />
+			<Form client:load />
 		</main>
 	</body>
 </html>

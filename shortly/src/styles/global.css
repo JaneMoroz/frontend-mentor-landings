@@ -7,7 +7,7 @@
   --veryDarkBlue: hsl(255, 11%, 22%);
   --veryDarkViolet: hsl(260, 8%, 14%);
   --white: #ffffff;
-  --overlay: rgba(34, 29, 37, 0.2);
+  --background: #eff1f7;
 }
 
 * {
@@ -167,4 +167,13 @@ h3 {
 .btn--big {
   font-size: 2rem;
   padding: 1.4rem 4rem;
+}
+
+.btn--form {
+  border-radius: 1rem;
+  white-space: nowrap;
+}
+
+.btn--copied {
+  background: var(--darkViolet);
 }

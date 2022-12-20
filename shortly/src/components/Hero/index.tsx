@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import "./style.css";
 
-const index = () => {
+const Hero = () => {
   return (
     <section className="hero">
       <div className="container">
@@ -25,4 +25,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Hero;

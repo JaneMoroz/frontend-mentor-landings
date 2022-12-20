@@ -1,4 +1,5 @@
 import Header from "./Header";
 import Hero from "./Hero";
+import Form from "./Form";
 
-export { Header, Hero };
+export { Header, Hero, Form };
