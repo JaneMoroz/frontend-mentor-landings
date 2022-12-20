@@ -35,7 +35,7 @@ const Form = () => {
       setError("Please add a link");
       setOriginalLink("");
     } else {
-      fetch(`https://api.shrtco.de/v2/shorten?url==${originalLink}`)
+      fetch(`https://api.shrtco.de/v2/shorten?url=${originalLink}`)
         .then((response) => response.json())
         .then((data) => {
           const newLink = {
