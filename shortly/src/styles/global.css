@@ -7,6 +7,7 @@
   --veryDarkBlue: hsl(255, 11%, 22%);
   --veryDarkViolet: hsl(260, 8%, 14%);
   --white: #ffffff;
+  --overlay: rgba(34, 29, 37, 0.2);
 }
 
 * {
@@ -23,6 +24,7 @@ html {
     font-size: 56.25%;
   }
 }
+
 @media only screen and (max-width: 37.5em) {
   html {
     font-size: 50%;
@@ -63,4 +65,57 @@ h1,
 h2,
 h3 {
   margin: 0;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/* Buttons/Links */
+
+.btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.btn--primary {
+  background: var(--cyan);
+  color: var(--white);
+  border-radius: 2.8rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
+  padding: 1rem 2.4rem;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn--hamburger {
+  height: 4.2rem;
+}
+
+.link,
+.btn {
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.link--primary,
+.btn--text {
+  color: var(--grayishViolet);
+}
+
+.link--primary:hover,
+.btn--text:hover {
+  color: var(--veryDarkViolet);
+}
+
+.link--big,
+.btn--big {
+  color: var(--white);
+  font-size: 1.8rem;
 }

@@ -1,5 +1,8 @@
 ---
 import "../styles/global.css"
+
+// Components
+import { Header } from "../components";
 ---
 
 <html lang="en">
@@ -14,6 +17,8 @@ import "../styles/global.css"
 		<title>Shortly</title>
 	</head>
 	<body>
-		<h1>Shortly</h1>
+		<main>
+			<Header client:load/>
+		</main>
 	</body>
 </html>
