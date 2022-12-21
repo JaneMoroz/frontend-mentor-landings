@@ -3,6 +3,7 @@
   --softRed: hsl(0, 94%, 66%);
   --grayishBlue: hsl(229, 8%, 60%);
   --veryDarkBlue: hsl(229, 31%, 21%);
+  --gray: #f0efef;
   --white: #ffffff;
   --overlay: rgba(37, 43, 70, 0.95);
 }
@@ -68,8 +69,7 @@ h3 {
 
 h1 {
   font-size: 5.6rem;
-  line-height: 6.4rem;
-  margin-bottom: 1.8rem;
+  line-height: 6rem;
 }
 
 h2 {
@@ -81,6 +81,10 @@ h3 {
   font-size: 2.2rem;
   line-height: 2.4rem;
   margin-bottom: 1.6rem;
+}
+
+p {
+  line-height: 2.4rem;
 }
 
 .text--white {
@@ -119,11 +123,13 @@ h3 {
 .btn--secondary {
   background: var(--softBlue);
   color: var(--white);
+  border: 1px solid var(--softBlue);
 }
 
 .btn--tertiary {
-  background: var(--grayishBlue);
+  background: var(--gray);
   color: var(--veryDarkBlue);
+  border: 1px solid var(--gray);
 }
 
 .btn--mobile {
@@ -152,8 +158,8 @@ h3 {
   color: var(--softRed);
 }
 
-.btn--hamburger {
-  height: 4.2rem;
+.btn--secondary:hover {
+  color: var(--softBlue);
 }
 
 .link--primary {

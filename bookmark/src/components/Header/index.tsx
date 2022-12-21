@@ -31,7 +31,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__inner">
-          <div className="header__logo">{!navIsOpen && <NavLogo />}</div>
+          <div className="header__logo">
+            <NavLogo />
+          </div>
           <nav className="header__nav">
             {links.map((link, index) => {
               return (
