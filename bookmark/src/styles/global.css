@@ -1,0 +1,159 @@
+:root {
+  --softBlue: hsl(231, 69%, 60%);
+  --softRed: hsl(0, 94%, 66%);
+  --grayishBlue: hsl(229, 8%, 60%);
+  --veryDarkBlue: hsl(229, 31%, 21%);
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+main {
+  position: relative;
+  min-height: 100vh;
+  color: var(--grayishBlue);
+  background: var(--white);
+  overflow-x: hidden;
+}
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+h1,
+h2,
+h3 {
+  color: var(--veryDarkBlue);
+  font-weight: 500;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+  margin-bottom: 1.8rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.text--white {
+  color: var(--white);
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+/* Buttons/Links */
+
+.btn,
+.link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-rect {
+  border-radius: 4px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
+  padding: 1rem 2.4rem;
+}
+
+.btn--primary {
+  background: var(--softRed);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.btn--secondary {
+  background: var(--softBlue);
+  color: var(--white);
+}
+
+.btn--tertiary {
+  background: var(--grayishBlue);
+  color: var(--veryDarkBlue);
+}
+
+.btn--primary:hover,
+.btn--secondary:hover,
+.btn--tertiary:hover {
+  filter: brightness(1.1);
+}
+
+.btn--hamburger {
+  height: 4.2rem;
+}
+
+.link--primary {
+  color: var(--veryDarkBlue);
+  text-transform: uppercase;
+}
+
+.link--primary:hover {
+  color: var(--grayishBlue);
+}
+
+.link--secondary {
+  position: relative;
+  color: var(--veryDarkBlue);
+  padding: 2.4rem;
+}
+
+.link--secondary::after.active {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 100%;
+  left: 0%;
+  background: var(--softRed);
+}
