@@ -32,7 +32,7 @@ const Features = () => {
     <div className="features">
       <div className="container">
         <div className="features__inner">
-          <div className="features__title">
+          <div className="title">
             <h2>Features</h2>
             <p>
               Our aim is to make it quick and easy for you to access your

@@ -87,6 +87,24 @@ p {
   line-height: 2.4rem;
 }
 
+.title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+  align-items: center;
+  text-align: center;
+}
+
+.title p {
+  width: 50%;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .title p {
+    width: 100%;
+  }
+}
+
 .text--white {
   color: var(--white);
 }

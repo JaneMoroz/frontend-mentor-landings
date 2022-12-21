@@ -2,18 +2,6 @@
   padding: 10rem 0 16rem 0;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.8rem;
-  align-items: center;
-  text-align: center;
-}
-
-.title p {
-  width: 50%;
-}
-
 .extensions-list {
   position: relative;
   display: grid;
@@ -55,10 +43,6 @@
 }
 
 @media only screen and (max-width: 56.25em) {
-  .title p {
-    width: 100%;
-  }
-
   .extensions-list {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 9rem;

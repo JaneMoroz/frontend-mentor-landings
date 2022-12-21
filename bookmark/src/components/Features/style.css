@@ -8,23 +8,6 @@
   row-gap: 4.8rem;
 }
 
-.features__title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 2.4rem;
-  text-align: center;
-  margin-bottom: 3.2rem;
-}
-
-.features__title p {
-  width: 50%;
-}
-
-.features__slider {
-}
-
 .features__slider-controls {
   width: 70%;
   margin: 0 auto;
@@ -101,10 +84,6 @@
 }
 
 @media only screen and (max-width: 56.25em) {
-  .features__title p {
-    width: 100%;
-  }
-
   .features__slider-controls {
     width: 100%;
     margin: 0 auto;
