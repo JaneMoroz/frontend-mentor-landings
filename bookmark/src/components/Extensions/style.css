@@ -6,6 +6,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   column-gap: 3rem;
   margin-top: 7.2rem;
 }
