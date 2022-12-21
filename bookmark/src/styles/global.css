@@ -4,6 +4,7 @@
   --grayishBlue: hsl(229, 8%, 60%);
   --veryDarkBlue: hsl(229, 31%, 21%);
   --white: #ffffff;
+  --overlay: rgba(37, 43, 70, 0.95);
 }
 
 * {
@@ -96,12 +97,13 @@ h3 {
 
 .btn,
 .link {
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
   transition: all 0.3s;
 }
 
-.btn-rect {
+.btn--rect {
   border-radius: 4px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
   padding: 1rem 2.4rem;
@@ -110,6 +112,7 @@ h3 {
 .btn--primary {
   background: var(--softRed);
   color: var(--white);
+  border: 1px solid var(--softRed);
   text-transform: uppercase;
 }
 
@@ -123,10 +126,30 @@ h3 {
   color: var(--veryDarkBlue);
 }
 
+.btn--mobile {
+  font-size: 2rem;
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  text-transform: uppercase;
+  border-radius: 4px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
+  padding: 1.8rem 0;
+}
+
+.btn--mobile:hover {
+  background: var(--white);
+  color: var(--veryDarkBlue);
+}
+
 .btn--primary:hover,
 .btn--secondary:hover,
 .btn--tertiary:hover {
-  filter: brightness(1.1);
+  background: var(--white);
+}
+
+.btn--primary:hover {
+  color: var(--softRed);
 }
 
 .btn--hamburger {
@@ -139,7 +162,7 @@ h3 {
 }
 
 .link--primary:hover {
-  color: var(--grayishBlue);
+  color: var(--softRed);
 }
 
 .link--secondary {
@@ -156,4 +179,15 @@ h3 {
   top: 100%;
   left: 0%;
   background: var(--softRed);
+}
+
+.link--mobile {
+  color: var(--white);
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--grayishBlue);
+  border-top: 0.3px solid var(--grayishBlue);
+  width: 100%;
+  padding: 2.4rem 0;
+  text-align: center;
 }

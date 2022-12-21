@@ -1,4 +1,9 @@
 ---
+// Global styles
+import "../styles/global.css"
+
+// Components
+import { Header } from "../components";
 ---
 
 <html lang="en">
@@ -13,6 +18,8 @@
 		<title>Bookmark</title>
 	</head>
 	<body>
-		<h1>Bookmark</h1>
+		<main>
+			<Header client:load />
+		</main>
 	</body>
 </html>
