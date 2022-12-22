@@ -42,6 +42,10 @@
   stroke: var(--softRed);
 }
 
+.accordion__title {
+  text-align: start;
+}
+
 .accordion__panel {
   padding-top: 1.4rem;
 }
@@ -57,6 +61,10 @@ fieldset {
 }
 
 @media only screen and (max-width: 56.5em) {
+  .questions {
+    padding: 4.4rem 0 6.4rem 0;
+  }
+
   .accordion-group {
     width: 80%;
   }

@@ -10,9 +10,9 @@ const Hero = () => {
       <div className="container">
         <div className="hero__inner">
           <motion.div
-            initial={{ x: "-100%" }}
-            animate={{ x: "0" }}
-            transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: "0", opacity: 1 }}
+            transition={{ duration: 0.8 }}
             className="hero__text"
           >
             <h1>A Simple Bookmark Manager </h1>
@@ -31,9 +31,9 @@ const Hero = () => {
             </div>
           </motion.div>
           <motion.div
-            // initial={{ x: "100%" }}
-            // animate={{ x: "-40%" }}
-            // transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: "0", opacity: 1 }}
+            transition={{ duration: 0.8 }}
             className="hero__image"
           />
         </div>

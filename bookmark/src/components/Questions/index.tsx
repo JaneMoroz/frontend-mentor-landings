@@ -54,7 +54,7 @@ const Questions = () => {
   };
 
   return (
-    <div className="questions">
+    <section className="questions">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 72 }}
@@ -115,7 +115,7 @@ const Questions = () => {
           <button className="btn btn--rect btn--secondary">More Info</button>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -44,6 +44,10 @@
 }
 
 @media only screen and (max-width: 56.25em) {
+  .extensions {
+    padding: 3.2rem 0;
+  }
+
   .extensions-list {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 9rem;

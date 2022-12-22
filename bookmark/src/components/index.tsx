@@ -3,5 +3,6 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Extensions from "./Extensions";
 import Questions from "./Questions";
+import CTA from "./CTA";
 
-export { Header, Hero, Features, Extensions, Questions };
+export { Header, Hero, Features, Extensions, Questions, CTA };

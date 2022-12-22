@@ -128,6 +128,7 @@ p {
   border-radius: 4px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
   padding: 1rem 2.4rem;
+  white-space: nowrap;
 }
 
 .btn--primary {

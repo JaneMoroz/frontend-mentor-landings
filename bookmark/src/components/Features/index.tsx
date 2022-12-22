@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 // Styles
 import "./style.css";
@@ -29,7 +30,19 @@ const Features = () => {
   const [slider, setSlider] = useState(0);
 
   return (
-    <div className="features">
+    <motion.section
+      initial={{ opacity: 0, y: 72 }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          delay: 0.5,
+          duration: 1,
+        },
+      }}
+      viewport={{ once: true }}
+      className="features"
+    >
       <div className="container">
         <div className="features__inner">
           <div className="title">
@@ -70,7 +83,7 @@ const Features = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.section>
   );
 };
 
