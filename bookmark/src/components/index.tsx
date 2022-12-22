@@ -4,5 +4,6 @@ import Features from "./Features";
 import Extensions from "./Extensions";
 import Questions from "./Questions";
 import CTA from "./CTA";
+import Footer from "./Footer";
 
-export { Header, Hero, Features, Extensions, Questions, CTA };
+export { Header, Hero, Features, Extensions, Questions, CTA, Footer };

@@ -57,16 +57,16 @@ const Questions = () => {
     <section className="questions">
       <div className="container">
         <motion.div
-          initial={{ opacity: 0, y: 72 }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              delay: 0.5,
-              duration: 1,
-            },
-          }}
-          viewport={{ once: true }}
+          // initial={{ opacity: 0, y: 72 }}
+          // whileInView={{
+          //   opacity: 1,
+          //   y: 0,
+          //   transition: {
+          //     delay: 0.5,
+          //     duration: 1,
+          //   },
+          // }}
+          // viewport={{ once: true }}
           className="questions__inner"
         >
           <div className="title">

@@ -185,24 +185,21 @@ p {
   text-transform: uppercase;
 }
 
-.link--primary:hover {
+.link--secondary {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 1.6rem;
+  letter-spacing: 0.3rem;
+}
+
+.link--primary:hover,
+.link--secondary:hover {
   color: var(--softRed);
 }
 
-.link--secondary {
-  position: relative;
-  color: var(--veryDarkBlue);
-  padding: 2.4rem;
-}
-
-.link--secondary::after.active {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  top: 100%;
-  left: 0%;
-  background: var(--softRed);
+.link--secondary:hover svg path {
+  fill: var(--softRed);
 }
 
 .link--mobile {

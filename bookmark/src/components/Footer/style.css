@@ -1,0 +1,29 @@
+.footer {
+  background: var(--veryDarkBlue);
+  padding: 2.4rem 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4.4rem;
+}
+
+.footer__nav {
+  flex: 3;
+  justify-self: start;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer__inner {
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+
+  .footer__nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
