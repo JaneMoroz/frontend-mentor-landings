@@ -71,6 +71,11 @@
     width: 100%;
   }
 
+  .form {
+    flex-direction: column;
+    row-gap: 3.2rem;
+  }
+
   .form__input-group {
     width: 100%;
   }
