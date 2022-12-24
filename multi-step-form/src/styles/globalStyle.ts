@@ -52,10 +52,12 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-weight: 400;
   }
   main {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     color: ${(props) => props.theme.marineBlue};
-    background: ${(props) => props.theme.white};
+    background: ${(props) => props.theme.magnolia};
     overflow-x: hidden;
   }
   ul {
