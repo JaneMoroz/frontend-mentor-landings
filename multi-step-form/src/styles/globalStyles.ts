@@ -13,14 +13,15 @@ export const Container = styled.div`
 type FlexProps = {
   spaceBetween?: boolean;
   justifyEnd?: boolean;
+  alignStretch?: boolean;
   column?: boolean;
   marginTop?: boolean;
 };
 
 export const Flex = styled.div<FlexProps>`
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   column-gap: 1.6rem;
   row-gap: 1.6rem;
   ${(props) =>
@@ -32,6 +33,11 @@ export const Flex = styled.div<FlexProps>`
     props.justifyEnd === true &&
     css`
       justify-content: flex-end;
+    `}
+     ${(props) =>
+    props.alignStretch === true &&
+    css`
+      align-items: stretch;
     `}
   ${(props) =>
     props.column === true &&
@@ -106,6 +112,18 @@ export const FormLink = styled(Link)`
 
   &:hover {
     background: ${(props) => props.theme.purplishBlue};
+  }
+`;
+
+export const TextLink = styled(Link)`
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 1.4rem 2.4rem;
+  color: ${(props) => props.theme.coolGray};
+  transition: all 0.3s;
+
+  &:hover {
+    color: ${(props) => props.theme.marineBlue};
   }
 `;
 

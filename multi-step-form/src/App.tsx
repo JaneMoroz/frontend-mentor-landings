@@ -5,10 +5,9 @@ import { GlobalStyle, theme } from "./styles/globalStyle";
 
 // Styled components
 import { Container } from "./styles/globalStyles";
-import { PrimaryHeading, Paragraph } from "./styles/globalStyles";
 
 // Components
-import { SharedLayout, Info } from "./components";
+import { SharedLayout, Info, Plan } from "./components";
 
 function App() {
   return (
@@ -24,6 +23,15 @@ function App() {
                   <Info
                     title="Personal info"
                     details="Please provide your name, email address, and phone number."
+                  />
+                }
+              />
+              <Route
+                path="plan"
+                element={
+                  <Plan
+                    title="Select your plan"
+                    details="You have the option of monthly or yearly billing."
                   />
                 }
               />

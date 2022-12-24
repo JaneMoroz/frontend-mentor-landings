@@ -7,12 +7,7 @@ import {
   FormLink,
   Flex,
 } from "../styles/globalStyles";
-import {
-  FormContainer,
-  FormGroup,
-  FormLabel,
-  FormInput,
-} from "../styles/formStyles";
+import { FormGroup, FormLabel, FormInput } from "../styles/formStyles";
 
 // Type
 type InfoProps = {
@@ -25,7 +20,7 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
     <>
       <PrimaryHeading>{title}</PrimaryHeading>
       <Paragraph>{details}</Paragraph>
-      <FormContainer>
+      <Flex column alignStretch>
         <FormGroup>
           <FormLabel htmlFor="name">Name</FormLabel>
           <FormInput
@@ -59,7 +54,7 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
         <Flex marginTop justifyEnd>
           <FormLink to="/plan">next step</FormLink>
         </Flex>
-      </FormContainer>
+      </Flex>
     </>
   );
 };
