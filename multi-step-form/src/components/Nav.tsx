@@ -6,10 +6,10 @@ import { NavContainer, NavLinks } from "../styles/navStyles";
 
 // Links
 const links = [
-  { stepNum: 1, stepTitle: "your info", stepPath: "#" },
-  { stepNum: 2, stepTitle: "select plan", stepPath: "#" },
-  { stepNum: 3, stepTitle: "add-ons", stepPath: "#" },
-  { stepNum: 4, stepTitle: "summary", stepPath: "#" },
+  { stepNum: 1, stepTitle: "your info", stepPath: "/" },
+  { stepNum: 2, stepTitle: "select plan", stepPath: "/plan" },
+  { stepNum: 3, stepTitle: "add-ons", stepPath: "/add_ons" },
+  { stepNum: 4, stepTitle: "summary", stepPath: "/summary" },
 ];
 
 const Nav = () => {
@@ -17,7 +17,7 @@ const Nav = () => {
     <NavContainer>
       <NavLinks>
         {links.map((link) => (
-          <NavLink href={link.stepPath} key={link.stepNum}>
+          <NavLink to={link.stepPath} key={link.stepNum}>
             <span className="number">{link.stepNum}</span>
             <div className="title">
               <span>step {link.stepNum}</span>

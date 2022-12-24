@@ -1,8 +1,10 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
-  max-width: 94rem;
+  min-width: 94rem;
   padding: 1.6rem;
+  margin: 3.2rem 0;
   background: ${(props) => props.theme.white};
   border-radius: 1.6rem;
   box-shadow: 2rem 4rem 4rem rgba(0, 0, 0, 0.08);
@@ -10,7 +12,9 @@ export const Container = styled.div`
 
 type FlexProps = {
   spaceBetween?: boolean;
+  justifyEnd?: boolean;
   column?: boolean;
+  marginTop?: boolean;
 };
 
 export const Flex = styled.div<FlexProps>`
@@ -25,13 +29,23 @@ export const Flex = styled.div<FlexProps>`
       justify-content: space-between;
     `}
   ${(props) =>
+    props.justifyEnd === true &&
+    css`
+      justify-content: flex-end;
+    `}
+  ${(props) =>
     props.column === true &&
     css`
       flex-direction: column;
     `}
+    ${(props) =>
+    props.marginTop === true &&
+    css`
+      margin-top: 9rem;
+    `}
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   column-gap: 1.6rem;
@@ -80,25 +94,25 @@ export const NavLink = styled.a`
   }
 `;
 
-export const Button = styled.button`
+export const FormLink = styled(Link)`
   font-weight: 500;
+  text-transform: capitalize;
   padding: 1.4rem 2.4rem;
-  background: var(--marineBlue);
-  color: var(--white);
+  background: ${(props) => props.theme.marineBlue};
+  color: ${(props) => props.theme.white};
   border-radius: 8px;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.125);
   transition: all 0.3s;
 
   &:hover {
-    background: var(--pastelBlue);
+    background: ${(props) => props.theme.purplishBlue};
   }
 `;
-
-export const Link = styled.a``;
 
 export const PrimaryHeading = styled.h1`
   font-size: 3.2rem;
   font-weight: 700;
+  margin-bottom: 1rem;
 `;
 
 export const SecondaryHeading = styled.h2``;
@@ -107,4 +121,8 @@ export const TertiaryHeading = styled.h3``;
 
 export const QuaternaryHeading = styled.h4``;
 
-export const Paragraph = styled.p``;
+export const Paragraph = styled.p`
+  color: ${(props) => props.theme.coolGray};
+  line-height: 2.5rem;
+  margin-bottom: 3.6rem;
+`;
