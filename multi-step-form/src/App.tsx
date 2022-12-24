@@ -1,12 +1,14 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle, theme } from "./styles/globalStyle";
 
 // Styled components
 import { Container } from "./styles/globalStyles";
+import { PrimaryHeading, Paragraph } from "./styles/globalStyles";
 
 // Components
-import { Step } from "./components";
+import { SharedLayout, Info } from "./components";
 
 function App() {
   return (
@@ -14,7 +16,19 @@ function App() {
       <GlobalStyle />
       <main>
         <Container>
-          <Step />
+          <Routes>
+            <Route path="/" element={<SharedLayout />}>
+              <Route
+                index
+                element={
+                  <Info
+                    title="Personal info"
+                    details="Please provide your name, email address, and phone number."
+                  />
+                }
+              />
+            </Route>
+          </Routes>
         </Container>
       </main>
     </ThemeProvider>
