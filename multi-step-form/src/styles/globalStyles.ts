@@ -13,13 +13,11 @@ export const Container = styled.div`
 type FlexProps = {
   spaceBetween?: boolean;
   justifyEnd?: boolean;
-  alignStretch?: boolean;
   column?: boolean;
-  marginTop?: boolean;
+  alignEnd?: boolean;
 };
 
 export const Flex = styled.div<FlexProps>`
-  width: 100%;
   display: flex;
   justify-content: center;
   column-gap: 1.6rem;
@@ -34,20 +32,17 @@ export const Flex = styled.div<FlexProps>`
     css`
       justify-content: flex-end;
     `}
-     ${(props) =>
-    props.alignStretch === true &&
-    css`
-      align-items: stretch;
-    `}
   ${(props) =>
     props.column === true &&
     css`
+      width: 100%;
       flex-direction: column;
     `}
     ${(props) =>
-    props.marginTop === true &&
+    props.alignEnd === true &&
     css`
-      margin-top: 9rem;
+      height: 100%;
+      align-items: flex-end;
     `}
 `;
 
@@ -133,14 +128,20 @@ export const PrimaryHeading = styled.h1`
   margin-bottom: 1rem;
 `;
 
-export const SecondaryHeading = styled.h2``;
-
-export const TertiaryHeading = styled.h3``;
-
-export const QuaternaryHeading = styled.h4``;
-
 export const Paragraph = styled.p`
   color: ${(props) => props.theme.coolGray};
   line-height: 2.5rem;
   margin-bottom: 3.6rem;
+`;
+
+export const Title = styled.span`
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: ${(props) => props.theme.marineBlue};
+  text-transform: capitalize;
+`;
+
+export const Details = styled.span`
+  font-size: 1.4rem;
+  color: ${(props) => props.theme.coolGray};
 `;

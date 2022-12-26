@@ -7,16 +7,20 @@ import {
   Flex,
   FormLink,
   TextLink,
+  Title,
+  Details,
 } from "../styles/globalStyles";
 
-// Icons
-import { ArcadeIcon, AdvancedIcon, ProIcon } from "../assets/icons/icons";
 import {
+  FormContainer,
   FormPlanButton,
   FormPlans,
   FormPlanType,
   FormSwitch,
 } from "../styles/formStyles";
+
+// Icons
+import { ArcadeIcon, AdvancedIcon, ProIcon } from "../assets/icons/icons";
 
 // Plans
 const plans = [
@@ -36,13 +40,13 @@ const Plan: React.FC<PlanProps> = ({ title, details }) => {
     <>
       <PrimaryHeading>{title}</PrimaryHeading>
       <Paragraph>{details}</Paragraph>
-      <Flex column>
+      <FormContainer>
         <FormPlans>
           {plans.map((plan, index) => (
             <FormPlanButton key={index}>
               {plan.icon}
-              <span className="plan-title">{plan.title}</span>
-              <span className="plan-price">${plan.monthPrice}/mo</span>
+              <Title>{plan.title}</Title>
+              <Details>${plan.monthPrice}/mo</Details>
             </FormPlanButton>
           ))}
         </FormPlans>
@@ -55,11 +59,11 @@ const Plan: React.FC<PlanProps> = ({ title, details }) => {
             <span className="slider"></span>
           </FormSwitch>
         </FormPlanType>
-        <Flex marginTop spaceBetween>
+        <Flex alignEnd spaceBetween>
           <TextLink to="/">go back</TextLink>
-          <FormLink to="/plan">next step</FormLink>
+          <FormLink to="/add_ons">next step</FormLink>
         </Flex>
-      </Flex>
+      </FormContainer>
     </>
   );
 };
