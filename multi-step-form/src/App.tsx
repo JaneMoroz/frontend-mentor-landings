@@ -7,7 +7,7 @@ import { GlobalStyle, theme } from "./styles/globalStyle";
 import { Container } from "./styles/globalStyles";
 
 // Components
-import { SharedLayout, Info, Plan } from "./components";
+import { SharedLayout, Info, Plan, AddOns } from "./components";
 
 function App() {
   return (
@@ -32,6 +32,15 @@ function App() {
                   <Plan
                     title="Select your plan"
                     details="You have the option of monthly or yearly billing."
+                  />
+                }
+              />
+              <Route
+                path="add_ons"
+                element={
+                  <AddOns
+                    title="Pick add-ons"
+                    details="Add-ons help enhance your gaming experience."
                   />
                 }
               />
