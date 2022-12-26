@@ -7,7 +7,7 @@ import { GlobalStyle, theme } from "./styles/globalStyle";
 import { Container } from "./styles/globalStyles";
 
 // Components
-import { SharedLayout, Info, Plan, AddOns } from "./components";
+import { SharedLayout, Info, Plan, AddOns, Summary } from "./components";
 
 function App() {
   return (
@@ -41,6 +41,15 @@ function App() {
                   <AddOns
                     title="Pick add-ons"
                     details="Add-ons help enhance your gaming experience."
+                  />
+                }
+              />
+              <Route
+                path="summary"
+                element={
+                  <Summary
+                    title="Finishing up"
+                    details="Double-check everything looks OK before confirming."
                   />
                 }
               />
