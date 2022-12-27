@@ -6,13 +6,9 @@ import {
   Paragraph,
   FormLink,
   Flex,
-} from "../styles/globalStyles";
-import {
-  FormGroup,
-  FormLabel,
-  FormInput,
   FormContainer,
-} from "../styles/formStyles";
+} from "../styles/globalStyles";
+import { InfoGroup, InfoLabel, InfoInput } from "../styles/infoStyles";
 
 // Type
 type InfoProps = {
@@ -26,36 +22,36 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
       <PrimaryHeading>{title}</PrimaryHeading>
       <Paragraph>{details}</Paragraph>
       <FormContainer>
-        <FormGroup>
-          <FormLabel htmlFor="name">Name</FormLabel>
-          <FormInput
+        <InfoGroup>
+          <InfoLabel htmlFor="name">Name</InfoLabel>
+          <InfoInput
             type="text"
             id="name"
             name="name"
             placeholder="e.g. Stephen King"
             required
           />
-        </FormGroup>
-        <FormGroup>
-          <FormLabel htmlFor="name">Email address</FormLabel>
-          <FormInput
+        </InfoGroup>
+        <InfoGroup>
+          <InfoLabel htmlFor="name">Email address</InfoLabel>
+          <InfoInput
             type="email"
             id="email"
             name="email"
             placeholder="e.g. stephenking@lorem.com"
             required
           />
-        </FormGroup>
-        <FormGroup>
-          <FormLabel htmlFor="phone">Phone number</FormLabel>
-          <FormInput
+        </InfoGroup>
+        <InfoGroup>
+          <InfoLabel htmlFor="phone">Phone number</InfoLabel>
+          <InfoInput
             type="text"
             id="phone"
             name="phone"
             placeholder="e.g. +1 234 567 890"
             required
           />
-        </FormGroup>
+        </InfoGroup>
         <Flex alignEnd justifyEnd>
           <FormLink to="/plan">next step</FormLink>
         </Flex>

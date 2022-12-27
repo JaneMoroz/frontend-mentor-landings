@@ -134,14 +134,22 @@ export const Paragraph = styled.p`
   margin-bottom: 3.6rem;
 `;
 
-export const Title = styled.span`
+export const FormContainer = styled.form`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+`;
+
+export const FormTitle = styled.span`
   font-size: 1.6rem;
   font-weight: 500;
   color: ${(props) => props.theme.marineBlue};
   text-transform: capitalize;
 `;
 
-export const Details = styled.span`
+export const FormDetails = styled.span`
   font-size: 1.4rem;
   color: ${(props) => props.theme.coolGray};
 `;

@@ -7,12 +7,13 @@ import {
   Flex,
   FormLink,
   TextLink,
-  Title,
-  Details,
+  FormContainer,
+  FormTitle,
+  FormDetails,
 } from "../styles/globalStyles";
 
 // Icons
-import { FormAddOnsCheck, FormContainer } from "../styles/formStyles";
+import { AddOnsCheck } from "../styles/addOnsStyles";
 
 // Plans
 const addOns = [
@@ -52,15 +53,15 @@ const AddOns: React.FC<AddOnsProps> = ({ title, details }) => {
       <Paragraph>{details}</Paragraph>
       <FormContainer>
         {addOns.map((addOn, index) => (
-          <FormAddOnsCheck checked key={index} htmlFor={addOn.name}>
+          <AddOnsCheck checked key={index} htmlFor={addOn.name}>
             <input type="checkbox" id={addOn.name} name={addOn.name} />
             <span className="checkmark"></span>
             <Flex column>
-              <Title>{addOn.title}</Title>
-              <Details>{addOn.details}</Details>
+              <FormTitle>{addOn.title}</FormTitle>
+              <FormDetails>{addOn.details}</FormDetails>
             </Flex>
             <span className="price">+${addOn.monthPrice}/mo</span>
-          </FormAddOnsCheck>
+          </AddOnsCheck>
         ))}
         <Flex alignEnd spaceBetween>
           <TextLink to="/plan">go back</TextLink>

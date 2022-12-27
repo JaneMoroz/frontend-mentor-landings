@@ -7,17 +7,17 @@ import {
   Flex,
   FormLink,
   TextLink,
-  Title,
-  Details,
+  FormContainer,
+  FormTitle,
+  FormDetails,
 } from "../styles/globalStyles";
 
 import {
-  FormContainer,
-  FormPlanButton,
-  FormPlans,
-  FormPlanType,
-  FormSwitch,
-} from "../styles/formStyles";
+  PlansContainer,
+  PlanButton,
+  PlanType,
+  DurationSwitch,
+} from "../styles/planStyles";
 
 // Icons
 import { ArcadeIcon, AdvancedIcon, ProIcon } from "../assets/icons/icons";
@@ -41,24 +41,24 @@ const Plan: React.FC<PlanProps> = ({ title, details }) => {
       <PrimaryHeading>{title}</PrimaryHeading>
       <Paragraph>{details}</Paragraph>
       <FormContainer>
-        <FormPlans>
+        <PlansContainer>
           {plans.map((plan, index) => (
-            <FormPlanButton key={index}>
+            <PlanButton key={index}>
               {plan.icon}
-              <Title>{plan.title}</Title>
-              <Details>${plan.monthPrice}/mo</Details>
-            </FormPlanButton>
+              <FormTitle>{plan.title}</FormTitle>
+              <FormDetails>${plan.monthPrice}/mo</FormDetails>
+            </PlanButton>
           ))}
-        </FormPlans>
-        <FormPlanType>
-          <FormSwitch>
+        </PlansContainer>
+        <PlanType>
+          <DurationSwitch>
             <input id="monthly" type="radio" name="switch" defaultChecked />
             <input id="yearly" type="radio" name="switch" />
             <label htmlFor="monthly">Monthly</label>
             <label htmlFor="yearly">Yearly</label>
             <span className="slider"></span>
-          </FormSwitch>
-        </FormPlanType>
+          </DurationSwitch>
+        </PlanType>
         <Flex alignEnd spaceBetween>
           <TextLink to="/">go back</TextLink>
           <FormLink to="/add_ons">next step</FormLink>

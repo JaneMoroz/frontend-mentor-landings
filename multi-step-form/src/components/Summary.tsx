@@ -7,14 +7,15 @@ import {
   Flex,
   TextLink,
   FormLink,
-  Title,
-} from "../styles/globalStyles";
-import {
   FormContainer,
-  FormSummary,
-  FormTotal,
+  FormTitle,
+} from "../styles/globalStyles";
+
+import {
+  SummaryContainer,
+  SummaryTotal,
   ChangePlanLink,
-} from "../styles/formStyles";
+} from "../styles/summaryStyles";
 
 // Type
 type SummaryProps = {
@@ -28,13 +29,13 @@ const Summary: React.FC<SummaryProps> = ({ title, details }) => {
       <PrimaryHeading>{title}</PrimaryHeading>
       <Paragraph>{details}</Paragraph>
       <FormContainer>
-        <FormSummary>
+        <SummaryContainer>
           <Flex spaceBetween>
             <div className="plan">
-              <Title>Arcade(Monthly)</Title>
+              <FormTitle>Arcade(Monthly)</FormTitle>
               <ChangePlanLink to="/plan">change</ChangePlanLink>
             </div>
-            <Title>$9/mo</Title>
+            <FormTitle>$9/mo</FormTitle>
           </Flex>
           <ul className="addons">
             <li>
@@ -46,11 +47,11 @@ const Summary: React.FC<SummaryProps> = ({ title, details }) => {
               <span>+$2/mo</span>
             </li>
           </ul>
-        </FormSummary>
-        <FormTotal>
+        </SummaryContainer>
+        <SummaryTotal>
           <span>Total (per month)</span>
           <span className="total">+$12/mo</span>
-        </FormTotal>
+        </SummaryTotal>
         <Flex alignEnd spaceBetween>
           <TextLink to="/add_ons">go back</TextLink>
           <FormLink to="/">confirm</FormLink>
