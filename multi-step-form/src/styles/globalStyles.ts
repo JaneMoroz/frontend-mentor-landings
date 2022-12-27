@@ -2,12 +2,16 @@ import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Container = styled.div`
-  min-width: 94rem;
   padding: 1.6rem;
   margin: 3.2rem 0;
   background: ${(props) => props.theme.white};
   border-radius: 1.6rem;
   box-shadow: 2rem 4rem 4rem rgba(0, 0, 0, 0.08);
+
+  @media only screen and (max-width: 56.25em) {
+    margin: 12rem 1.6rem;
+    z-index: 999;
+  }
 `;
 
 type FlexProps = {
@@ -64,6 +68,11 @@ export const NavLink = styled(Link)`
     border: 1px solid ${(props) => props.theme.white};
     border-radius: 50%;
     transition: all 0.3s;
+
+    @media only screen and (max-width: 56.25em) {
+      height: 4.8rem;
+      width: 4.8rem;
+    }
   }
 
   .title {
@@ -83,6 +92,10 @@ export const NavLink = styled(Link)`
       letter-spacing: 1px;
       text-transform: uppercase;
       color: ${(props) => props.theme.white};
+    }
+
+    @media only screen and (max-width: 56.25em) {
+      display: none;
     }
   }
 
@@ -152,4 +165,19 @@ export const FormTitle = styled.span`
 export const FormDetails = styled.span`
   font-size: 1.4rem;
   color: ${(props) => props.theme.coolGray};
+`;
+
+export const FormButtons = styled.div`
+  height: 100%;
+
+  @media only screen and (max-width: 56.25em) {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    padding: 1.6rem 0.6rem;
+    background: ${(props) => props.theme.white};
+    top: 100%;
+    left: 0;
+    transform: translateY(-100%);
+  }
 `;

@@ -7,7 +7,14 @@ import { GlobalStyle, theme } from "./styles/globalStyle";
 import { Container } from "./styles/globalStyles";
 
 // Components
-import { SharedLayout, Info, Plan, AddOns, Summary } from "./components";
+import {
+  SharedLayout,
+  Info,
+  Plan,
+  AddOns,
+  Summary,
+  MobileNav,
+} from "./components";
 
 function App() {
   return (
@@ -56,6 +63,7 @@ function App() {
             </Route>
           </Routes>
         </Container>
+        <MobileNav />
       </main>
     </ThemeProvider>
   );

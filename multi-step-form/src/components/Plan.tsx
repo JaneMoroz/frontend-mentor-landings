@@ -10,11 +10,13 @@ import {
   FormContainer,
   FormTitle,
   FormDetails,
+  FormButtons,
 } from "../styles/globalStyles";
 
 import {
   PlansContainer,
   PlanButton,
+  PlanText,
   PlanType,
   DurationSwitch,
 } from "../styles/planStyles";
@@ -45,8 +47,10 @@ const Plan: React.FC<PlanProps> = ({ title, details }) => {
           {plans.map((plan, index) => (
             <PlanButton key={index}>
               {plan.icon}
-              <FormTitle>{plan.title}</FormTitle>
-              <FormDetails>${plan.monthPrice}/mo</FormDetails>
+              <PlanText>
+                <FormTitle>{plan.title}</FormTitle>
+                <FormDetails>${plan.monthPrice}/mo</FormDetails>
+              </PlanText>
             </PlanButton>
           ))}
         </PlansContainer>
@@ -59,10 +63,12 @@ const Plan: React.FC<PlanProps> = ({ title, details }) => {
             <span className="slider"></span>
           </DurationSwitch>
         </PlanType>
-        <Flex alignEnd spaceBetween>
-          <TextLink to="/">go back</TextLink>
-          <FormLink to="/add_ons">next step</FormLink>
-        </Flex>
+        <FormButtons>
+          <Flex alignEnd spaceBetween>
+            <TextLink to="/">go back</TextLink>
+            <FormLink to="/add_ons">next step</FormLink>
+          </Flex>
+        </FormButtons>
       </FormContainer>
     </>
   );

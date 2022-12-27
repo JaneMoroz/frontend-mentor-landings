@@ -9,6 +9,7 @@ import {
   FormLink,
   FormContainer,
   FormTitle,
+  FormButtons,
 } from "../styles/globalStyles";
 
 import {
@@ -52,10 +53,12 @@ const Summary: React.FC<SummaryProps> = ({ title, details }) => {
           <span>Total (per month)</span>
           <span className="total">+$12/mo</span>
         </SummaryTotal>
-        <Flex alignEnd spaceBetween>
-          <TextLink to="/add_ons">go back</TextLink>
-          <FormLink to="/">confirm</FormLink>
-        </Flex>
+        <FormButtons>
+          <Flex alignEnd spaceBetween>
+            <TextLink to="/add_ons">go back</TextLink>
+            <FormLink to="/">confirm</FormLink>
+          </Flex>
+        </FormButtons>
       </FormContainer>
     </>
   );

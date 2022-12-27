@@ -3,13 +3,23 @@ import styled, { css } from "styled-components";
 export const NavContainer = styled.nav`
   background-image: url("/images/bg-sidebar-desktop.svg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   padding: 4rem 10rem 0 3.2rem;
   border-radius: 10px;
+
+  @media only screen and (max-width: 56.25em) {
+    display: none;
+  }
 `;
 
 export const NavLinks = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 3.2rem;
+
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.6rem;
+  }
 `;

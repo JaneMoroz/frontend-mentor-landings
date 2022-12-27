@@ -7,6 +7,7 @@ import {
   FormLink,
   Flex,
   FormContainer,
+  FormButtons,
 } from "../styles/globalStyles";
 import { InfoGroup, InfoLabel, InfoInput } from "../styles/infoStyles";
 
@@ -52,9 +53,11 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
             required
           />
         </InfoGroup>
-        <Flex alignEnd justifyEnd>
-          <FormLink to="/plan">next step</FormLink>
-        </Flex>
+        <FormButtons>
+          <Flex alignEnd justifyEnd>
+            <FormLink to="/plan">next step</FormLink>
+          </Flex>
+        </FormButtons>
       </FormContainer>
     </>
   );

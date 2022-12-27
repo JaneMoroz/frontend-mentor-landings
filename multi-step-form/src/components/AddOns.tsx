@@ -10,6 +10,7 @@ import {
   FormContainer,
   FormTitle,
   FormDetails,
+  FormButtons,
 } from "../styles/globalStyles";
 
 // Icons
@@ -63,10 +64,12 @@ const AddOns: React.FC<AddOnsProps> = ({ title, details }) => {
             <span className="price">+${addOn.monthPrice}/mo</span>
           </AddOnsCheck>
         ))}
-        <Flex alignEnd spaceBetween>
-          <TextLink to="/plan">go back</TextLink>
-          <FormLink to="/summary">next step</FormLink>
-        </Flex>
+        <FormButtons>
+          <Flex alignEnd spaceBetween>
+            <TextLink to="/plan">go back</TextLink>
+            <FormLink to="/summary">next step</FormLink>
+          </Flex>
+        </FormButtons>
       </FormContainer>
     </>
   );

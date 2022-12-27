@@ -52,6 +52,7 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     font-weight: 400;
   }
   main {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +60,10 @@ export const GlobalStyle = createGlobalStyle<{ theme: ThemeType }>`
     color: ${(props) => props.theme.marineBlue};
     background: ${(props) => props.theme.magnolia};
     overflow-x: hidden;
+
+    @media only screen and (max-width: 56.25em) {
+    align-items: flex-start;
+  }
   }
   ul {
     text-decoration: none;

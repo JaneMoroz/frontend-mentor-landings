@@ -4,6 +4,12 @@ export const PlansContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.8rem;
+
+  @media only screen and (max-width: 56.25em) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+  }
 `;
 
 export const PlanButton = styled.button`
@@ -23,6 +29,23 @@ export const PlanButton = styled.button`
     background: ${(props) => props.theme.alabaster};
     border: 1px solid ${(props) => props.theme.purplishBlue};
   }
+
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.4rem;
+
+    svg {
+      margin-bottom: 0;
+    }
+  }
+`;
+
+export const PlanText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 0.7rem;
 `;
 
 export const PlanType = styled.div`
