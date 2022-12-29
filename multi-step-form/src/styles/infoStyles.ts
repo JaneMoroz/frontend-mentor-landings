@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const InfoGroup = styled.div`
   display: flex;
@@ -9,9 +9,21 @@ export const InfoGroup = styled.div`
 export const InfoLabel = styled.label`
   font-size: 1.4rem;
   text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+
+  .error {
+    font-weight: 700;
+    text-transform: none;
+    color: ${(props) => props.theme.strawberryRed};
+  }
 `;
 
-export const InfoInput = styled.input`
+type InfoInputProps = {
+  error?: boolean;
+};
+
+export const InfoInput = styled.input<InfoInputProps>`
   padding: 1.2rem 1.6rem;
   border: 1px solid ${(props) => props.theme.lightGray};
   border-radius: 8px;
@@ -26,4 +38,10 @@ export const InfoInput = styled.input`
   &:focus {
     border: 1px solid ${(props) => props.theme.purplishBlue};
   }
+
+  ${(props) =>
+    props.error === true &&
+    css`
+      border: 1px solid ${(props) => props.theme.strawberryRed};
+    `}
 `;

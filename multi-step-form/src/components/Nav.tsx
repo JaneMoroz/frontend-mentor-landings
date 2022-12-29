@@ -1,8 +1,9 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 // Styled Components
-import { NavLink } from "../styles/globalStyles";
-import { NavContainer, NavLinks } from "../styles/navStyles";
+import { NavListItem } from "../styles/globalStyles";
+import { NavContainer, NavList } from "../styles/navStyles";
 
 // Links
 const links = [
@@ -13,19 +14,23 @@ const links = [
 ];
 
 const Nav = () => {
+  const location = useLocation();
   return (
     <NavContainer>
-      <NavLinks>
+      <NavList>
         {links.map((link) => (
-          <NavLink to={link.stepPath} key={link.stepNum}>
+          <NavListItem
+            active={location.pathname === link.stepPath}
+            key={link.stepNum}
+          >
             <span className="number">{link.stepNum}</span>
             <div className="title">
               <span>step {link.stepNum}</span>
               <span>{link.stepTitle}</span>
             </div>
-          </NavLink>
+          </NavListItem>
         ))}
-      </NavLinks>
+      </NavList>
     </NavContainer>
   );
 };

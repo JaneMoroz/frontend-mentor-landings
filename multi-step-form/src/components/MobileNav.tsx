@@ -2,8 +2,8 @@ import React from "react";
 
 // Styled components
 import { MobileNavContainer } from "../styles/mobileNavStyles";
-import { NavLinks } from "../styles/navStyles";
-import { NavLink } from "../styles/globalStyles";
+import { NavList } from "../styles/navStyles";
+import { NavListItem } from "../styles/globalStyles";
 
 // Links
 // TODO: move to assets or utils
@@ -17,13 +17,13 @@ const links = [
 const MobileNav = () => {
   return (
     <MobileNavContainer>
-      <NavLinks>
+      <NavList>
         {links.map((link) => (
-          <NavLink to={link.stepPath} key={link.stepNum}>
+          <NavListItem to={link.stepPath} key={link.stepNum}>
             <span className="number">{link.stepNum}</span>
-          </NavLink>
+          </NavListItem>
         ))}
-      </NavLinks>
+      </NavList>
     </MobileNavContainer>
   );
 };

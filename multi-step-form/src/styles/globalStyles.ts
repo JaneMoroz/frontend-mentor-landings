@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Link, NavLink as NLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Container = styled.div`
   padding: 1.6rem;
@@ -58,10 +58,15 @@ export const Flex = styled.div<FlexProps>`
     `}
 `;
 
-export const NavLink = styled(NLink)`
+type NavListItemProps = {
+  active?: boolean;
+};
+
+export const NavListItem = styled.li<NavListItemProps>`
   display: flex;
   align-items: center;
   column-gap: 1.6rem;
+  cursor: default;
 
   .number {
     display: flex;
@@ -108,19 +113,15 @@ export const NavLink = styled(NLink)`
     }
   }
 
-  &:hover {
-    .number {
-      background: ${(props) => props.theme.lightBlue};
-      color: ${(props) => props.theme.purplishBlue};
-      border: 1px solid ${(props) => props.theme.lightBlue};
-    }
-  }
-
-  &.active .number {
-    background: ${(props) => props.theme.lightBlue};
-    color: ${(props) => props.theme.purplishBlue};
-    border: 1px solid ${(props) => props.theme.lightBlue};
-  }
+  ${(props) =>
+    props.active === true &&
+    css`
+      .number {
+        background: ${(props) => props.theme.lightBlue};
+        color: ${(props) => props.theme.purplishBlue};
+        border: 1px solid ${(props) => props.theme.lightBlue};
+      }
+    `}
 `;
 
 export const FormLink = styled.button`

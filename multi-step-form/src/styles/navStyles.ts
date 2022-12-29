@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const NavContainer = styled.nav`
+export const NavContainer = styled.div`
   background-image: url("/images/bg-sidebar-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,7 +12,7 @@ export const NavContainer = styled.nav`
   }
 `;
 
-export const NavLinks = styled.ul`
+export const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   row-gap: 3.2rem;
