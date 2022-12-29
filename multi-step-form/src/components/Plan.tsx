@@ -82,13 +82,9 @@ const Plan: React.FC<PlanProps> = ({ title, details }) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    addPlan(userPlan);
     navigate("/add_ons");
   };
-
-  // Update store values
-  useEffect(() => {
-    addPlan(userPlan);
-  }, [userPlan]);
 
   return (
     <>

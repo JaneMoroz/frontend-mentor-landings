@@ -43,13 +43,11 @@ const Info: React.FC<InfoProps> = observer(({ title, details }) => {
     e.preventDefault();
     const errors = validateUser(user.name, user.email, user.phone);
     setErrors(errors);
-    if (errors.state === false) navigate("/plan");
+    if (errors.state === false) {
+      addPersonalInfo(user);
+      navigate("/plan");
+    }
   };
-
-  // Update store values
-  useEffect(() => {
-    addPersonalInfo(user);
-  }, [user]);
 
   return (
     <>

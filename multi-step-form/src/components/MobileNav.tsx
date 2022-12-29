@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 // Styled components
 import { MobileNavContainer } from "../styles/mobileNavStyles";
@@ -15,11 +16,15 @@ const links = [
 ];
 
 const MobileNav = () => {
+  const location = useLocation();
   return (
     <MobileNavContainer>
       <NavList>
         {links.map((link) => (
-          <NavListItem to={link.stepPath} key={link.stepNum}>
+          <NavListItem
+            active={location.pathname === link.stepPath}
+            key={link.stepNum}
+          >
             <span className="number">{link.stepNum}</span>
           </NavListItem>
         ))}

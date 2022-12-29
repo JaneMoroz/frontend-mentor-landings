@@ -82,13 +82,9 @@ const AddOns: React.FC<AddOnsProps> = ({ title, details }) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    addAddOns(userAddOns);
     navigate("/summary");
   };
-
-  // Update store values
-  useEffect(() => {
-    addAddOns(userAddOns);
-  }, [userAddOns]);
 
   return (
     <>
