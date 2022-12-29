@@ -1,4 +1,7 @@
-import React from "react";
+import React, { FormEvent, useState, useEffect } from "react";
+import { observer } from "mobx-react";
+import { useStore } from "../context/context";
+import { useNavigate } from "react-router-dom";
 
 // Styled components
 import {
@@ -17,7 +20,26 @@ type InfoProps = {
   details: string;
 };
 
-const Info: React.FC<InfoProps> = ({ title, details }) => {
+const Info: React.FC<InfoProps> = observer(({ title, details }) => {
+  const navigate = useNavigate();
+
+  const { formInfo, addPersonalInfo } = useStore();
+  const [user, setUser] = useState({
+    name: formInfo.info.name,
+    email: formInfo.info.email,
+    phone: formInfo.info.phone,
+  });
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    navigate("/plan");
+  };
+
+  // Update store values
+  useEffect(() => {
+    addPersonalInfo(user);
+  }, [user]);
+
   return (
     <>
       <PrimaryHeading>{title}</PrimaryHeading>
@@ -30,6 +52,8 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
             id="name"
             name="name"
             placeholder="e.g. Stephen King"
+            value={user.name}
+            onChange={(e) => setUser({ ...user, name: e.target.value })}
             required
           />
         </InfoGroup>
@@ -40,6 +64,8 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
             id="email"
             name="email"
             placeholder="e.g. stephenking@lorem.com"
+            value={user.email}
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
             required
           />
         </InfoGroup>
@@ -50,17 +76,21 @@ const Info: React.FC<InfoProps> = ({ title, details }) => {
             id="phone"
             name="phone"
             placeholder="e.g. +1 234 567 890"
+            value={user.phone}
+            onChange={(e) => setUser({ ...user, phone: e.target.value })}
             required
           />
         </InfoGroup>
         <FormButtons>
           <Flex alignEnd justifyEnd>
-            <FormLink to="/plan">next step</FormLink>
+            <FormLink type="submit" onClick={(e) => handleSubmit(e)}>
+              next step
+            </FormLink>
           </Flex>
         </FormButtons>
       </FormContainer>
     </>
   );
-};
+});
 
 export default Info;

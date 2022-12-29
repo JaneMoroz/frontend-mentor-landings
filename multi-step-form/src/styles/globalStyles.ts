@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink as NLink } from "react-router-dom";
 
 export const Container = styled.div`
   padding: 1.6rem;
@@ -19,6 +19,7 @@ type FlexProps = {
   justifyEnd?: boolean;
   column?: boolean;
   alignEnd?: boolean;
+  center?: boolean;
 };
 
 export const Flex = styled.div<FlexProps>`
@@ -48,9 +49,16 @@ export const Flex = styled.div<FlexProps>`
       height: 100%;
       align-items: flex-end;
     `}
+     ${(props) =>
+    props.center === true &&
+    css`
+      align-items: center;
+      text-align: center;
+      height: 100%;
+    `}
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(NLink)`
   display: flex;
   align-items: center;
   column-gap: 1.6rem;
@@ -92,6 +100,7 @@ export const NavLink = styled(Link)`
       letter-spacing: 1px;
       text-transform: uppercase;
       color: ${(props) => props.theme.white};
+      white-space: nowrap;
     }
 
     @media only screen and (max-width: 56.25em) {
@@ -106,9 +115,15 @@ export const NavLink = styled(Link)`
       border: 1px solid ${(props) => props.theme.lightBlue};
     }
   }
+
+  &.active .number {
+    background: ${(props) => props.theme.lightBlue};
+    color: ${(props) => props.theme.purplishBlue};
+    border: 1px solid ${(props) => props.theme.lightBlue};
+  }
 `;
 
-export const FormLink = styled(Link)`
+export const FormLink = styled.button`
   font-weight: 500;
   text-transform: capitalize;
   padding: 1.4rem 2.4rem;

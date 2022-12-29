@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const PlansContainer = styled.div`
   display: grid;
@@ -12,7 +12,11 @@ export const PlansContainer = styled.div`
   }
 `;
 
-export const PlanButton = styled.button`
+type PlanButtonProps = {
+  checked?: boolean;
+};
+
+export const PlanButton = styled.button<PlanButtonProps>`
   display: flex;
   flex-direction: column;
   row-gap: 0.8rem;
@@ -20,6 +24,13 @@ export const PlanButton = styled.button`
   border: 1px solid ${(props) => props.theme.lightGray};
   border-radius: 8px;
   transition: all 0.3s;
+
+  ${(props) =>
+    props.checked === true &&
+    css`
+      background: ${(props) => props.theme.alabaster};
+      border: 1px solid ${(props) => props.theme.purplishBlue};
+    `}
 
   svg {
     margin-bottom: 4rem;
